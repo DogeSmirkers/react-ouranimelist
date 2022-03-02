@@ -1,0 +1,12 @@
+.main {
+    background-image: url('../src/images/japan.jpeg');
+    background-attachment: cover;
+}
+.personalSuggestion {
+   background-image: url('./images/oddtaxi.jpg');
+   padding: 10px;
+}
+.App {
+    width: 100px;
+    height: 100px;
+}
