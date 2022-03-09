@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CreateUser from './CreateUser';
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CreateUser />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
