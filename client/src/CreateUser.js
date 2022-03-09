@@ -43,7 +43,6 @@ export default class CreateUser extends Component {
                 <Form.Control type="email" placeholder="Enter email" value={this.state.email} onChange={this.onChangeUserEmail}/>
                 <Form.Text className="text-muted">
                   We'll never share your email with anyone else.
-                  Log - 
                 </Form.Text>
               </Form.Group>
 
