@@ -1,0 +1,130 @@
+.main {
+    background-image: url('../src/images/japan.jpeg');
+    background-attachment: cover;
+}
+.personalSuggestion {
+   background-image: url('./images/oddtaxi.jpg');
+   padding: 150px;
+}
+.App {
+    width: 100px;
+    height: 100px;
+}
+.bar {
+    background-image: url('./images/logobanner.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* box-shadow: 0px 0px 1px black; */
+    padding: 68px;
+}
+
+/* Search Bar */
+.searchBar input[type = "text"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 2px solid #d69191;
+    padding: 3px 10px;
+    outline: none;
+    color: rgb(90, 81, 81);
+    transition: 0.25s;
+    height: 25px;
+    width: 220px;
+}
+.searchBar input[type = "text"]:focus {
+    width: 240px;
+    border-color: #654321;
+}
+.searchBar input[type = "submit"] {
+    border: 0;
+    background: none;
+    display: flex;
+    margin: 10px auto;
+    border: 2px solid #d69191;
+    padding: 1px 11px;
+    width: 50px;
+    outline: none;
+    color: rgb(90, 81, 81);
+    font-weight: bold;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    transform: translate(145px, -40px); 
+}
+.searchBar input[type = "submit"]:hover {
+    background: #fdab9f;
+    border-color: #cc6666;
+}
+
+/* Login Box */
+.loginBox {
+    padding: 1px;
+    position: flex;
+    background-image: url('./images/loginbackground4.png');
+    background-size: cover;
+    text-align: center;
+    /* box-shadow: 0px 0px 2px black; */
+}
+
+.loginBox input[type = "text"], .loginBox input[type = "password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #a67b5b;
+    padding: 5px 2px;
+    width: 130px;
+    outline: none;
+    color: #666362;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.loginBox input[type = "text"]:focus, .loginBox input[type = "password"]:focus {
+    width: 200px;
+    border-color: #654321;
+}
+.loginBox input[type = "submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #cd5c5c;
+    padding: 3px 10px;
+    outline: none;
+    color: rgb(90, 81, 81);
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.loginBox input[type = "submit"]:hover {
+    background: #fdab9f;
+}
+.loginBox input[type = "button"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size: 14px;
+    border: 2px solid #cd5c5c;
+    padding: 5px 15px;
+    outline: none;
+    color: rgb(90, 81, 81);
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: -1px;
+}
+.loginBox input[type = "button"]:hover {
+    background: #fdab9f;
+}
