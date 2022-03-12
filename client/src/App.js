@@ -14,6 +14,15 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import './app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Marketing from './components/pages/Marketing';
+import Consulting from './components/pages/Consulting';
+import Products from './components/pages/Products';
+import ContactUs from './components/pages/ContactUs';
+import SignUp from './components/pages/SignUp';
+import Home from './components/pages/Home';
+import Services from './components/pages/Services';
 
 function App() {
   const HorizontalLine = ({ color }) => (
@@ -53,8 +62,22 @@ function App() {
             </Col> 
           </Row>
 
+          {/* CRY NAVBAR */}
+          <Router>
+            <Navbar />
+            {/* <Switch>
+              <Route path='/' exact component={Home} />
+              <Route path='/services' exact component={Services} />
+              <Route path='/products' exact component={Products} />
+              <Route path='/contact-us' exact component={ContactUs} />
+              <Route path='/sign-up' exact component={SignUp} />
+              <Route path='/marketing' exact component={Marketing} />
+              <Route path='/consulting' exact component={Consulting} />
+            </Switch> */}
+          </Router>
+
           {/* Nav Bar */}
-          <Row className="justify-content-center" xs={2} style={{ marginTop: 30 }}>
+          {/* <Row className="justify-content-center" xs={2} style={{ marginTop: 30 }}>
             <Col sm={3}>
               <DropdownButton alignRight variant="outline-secondary" title="About Us" id="input-group-dropdown-1">
                 <Dropdown.Item href="#">Action</Dropdown.Item>
@@ -91,7 +114,7 @@ function App() {
                 <Dropdown.Item href="#">Separated link</Dropdown.Item>
               </DropdownButton>
             </Col>
-          </Row>
+          </Row> */}
 
           {/* Image Carousel */}
           <Row style={{ marginTop: 30 }}>
@@ -136,7 +159,7 @@ function App() {
 
           {/* Personal Suggestions */}
           <Row style={{ marginTop: 30 }}>
-            <h6>Your Personal Anime Suggestions</h6>
+            <h3>Your Personal Anime Suggestions</h3>
           </Row>
           <Row style={{ marginTop: 30 }}>
             <Col xs={2} md={6} lg={{ span: 4 }} >
@@ -151,7 +174,7 @@ function App() {
 
           {/* Shounen Suggestions */}
           <Row style={{ marginTop: 30 }}>
-            <h6>Shounen Suggestions</h6>
+            <h4>Shounen Suggestions</h4>
             <CardGroup>
               <Card>
                 <Card.Img variant="top" src="./images/naruto.jpg" />
@@ -182,7 +205,7 @@ function App() {
 
           {/* Shoujo Suggestions */}
           <Row style={{ marginTop: 30 }}>
-            <h6>Shoujo Suggestions</h6>
+            <h4>Shoujo Suggestions</h4>
             <CardGroup>
               <Card>
                 <Card.Img variant="top" src="./images/naruto.jpg" />
@@ -212,8 +235,8 @@ function App() {
           </Row>
 
           {/* Footer */}
-          <Row style={{ marginTop: 30, span: 12 }}>
-            Designed and Managed by <a href="https://shibuyanobody.github.io/" target="_blank"><i>Team DogeSmirk</i> <img src="images/dogesmirk.jpg" alt="" height="16px" width="auto"/></a>
+          <Row className='footer' style={{ marginTop: 30, span: 12 }}>
+            <h8>Designed and Managed by <a className='dogesmirk' href="https://github.com/DogeSmirkers" target="_blank"><i>Team DogeSmirk</i> <img src="images/dogesmirk.jpg" alt="" height="16px" width="auto"/></a></h8>
           </Row>
         </Container>
       </Container>
