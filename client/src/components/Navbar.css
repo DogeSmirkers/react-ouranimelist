@@ -1,22 +1,27 @@
 .navbar {
   /* background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%); */
   background-color: #fbcfcd;
-  /* height: 80px; */
-  /* display: flex; */
-  /* justify-content: center; */
+  height: 80px;
+  display: flex;
+  justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  padding-top: 15pt;
+  /* padding-top: 15pt; */
 }
 
-/* .navbar-logo {
-  color: #fff;
+.navbar-logo {
+  color: #565455;
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
-} */
+  padding-bottom: 15pt;
+  transition: all 0.2s ease-out;
+}
+.navbar-logo:hover {
+  color: #EEF1F8;
+}
 
 .fa-firstdraft {
   margin-left: 0.5rem;
@@ -25,10 +30,10 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(7, auto);
   grid-gap: 10px;
   list-style: none;
-  text-align: center;
+  text-align: right;
   width: 70vw;
   /* justify-content: center; */
   margin-right: 2rem;
@@ -37,7 +42,7 @@
 .nav-item {
   display: flex;
   align-items: center;
-  /* height: 80px; */
+  height: 80px;
 }
 
 .nav-links {
@@ -47,8 +52,8 @@
 }
 
 .nav-links:hover {
-  background-color: #ffffff;
-  border-radius: 4px;
+  color: #EEF1F8;
+  /* border-radius: 4px; */
   transition: all 0.2s ease-out;
 }
 
@@ -62,6 +67,35 @@
 
 .menu-icon {
   display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  color: #fff;
+}
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.btn-check:active+.btn-primary, .btn-check:checked+.btn-primary, .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle
+{
+  background-color: #fbcfcd;
+  border-color: #fbcfcd;
+}
+.btn-primary {
+  color: #565455;
+  background-color: #fbcfcd;
+  border-color: #fbcfcd;
+  font-size: 15pt;
+  padding: 0px;
+}
+.btn-primary:hover {
+  display: block;
+  background-color: #fbcfcd;
+  border-color: #fbcfcd;
+}
+.btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus
+{
+  box-shadow: 0 0 0 0.25rem #fbcfcd;
 }
 
 @media screen and (max-width: 960px) {
@@ -82,7 +116,7 @@
   }
 
   .nav-menu.active {
-    background: #242222;
+    background: #ffffff;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -130,7 +164,7 @@
     margin: 2rem auto;
     border-radius: 4px;
     width: 80%;
-    background: #ffffff;
+    background: #EEF1F8;
     text-decoration: none;
     color: #fff;
     font-size: 1.5rem;

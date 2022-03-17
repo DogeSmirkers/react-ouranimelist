@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MenuItems } from './MenuItems';
+import { MostPopularItems } from './MostPopularItems';
 import './Dropdown.css';
 import { Link } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ function Dropdown() {
         onClick={handleClick}
         className={click ? 'dropdown-menu clicked' : 'dropdown-menu'}
       >
-        {MenuItems.map((item, index) => {
+        {MostPopularItems.map((item, index) => {
           return (
             <li key={index}>
               <Link
