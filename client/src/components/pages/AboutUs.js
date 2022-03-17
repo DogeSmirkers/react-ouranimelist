@@ -30,7 +30,7 @@ export default function AboutUs() {
         </Row>
         <Row>
           <Col>
-            <img className='teamImg' src={require('../images/dogesmirk.jpg')} height='200px' />
+            <img className='teamImg' src={require('../images/leon_smirk.jpg')} height='200px' />
             <h4 className='centerText'><a className='teamLink' href='https://github.com/yelu2021' target="_blank">Leon</a></h4>
           </Col>
           <Col>
