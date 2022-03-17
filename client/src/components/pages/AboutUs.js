@@ -7,10 +7,10 @@ export default function AboutUs() {
   return (
     <>
       <div className='bgColor'>
-              <Marquee speed={80} gradientColor='none'>
-                <h1>We are Team DogeSmirk <img src={require('../images/dogesmirk.jpg')} height='30px' /> </h1>
-              </Marquee>
-            </div>
+        <Marquee speed={80} gradientColor='none'>
+          <h1>We are Team DogeSmirk <img src={require('../images/dogesmirk.jpg')} height='30px' /> </h1>
+        </Marquee>
+      </div>
       <Container>
         <Row>
           <Col>

@@ -64,9 +64,10 @@ export default function Home() {
               <p><b>Episodes:</b> 13</p>
             </Col>
           </Row>
-          </div>
+        </div>
 
-          {/* Shounen Suggestions */}
+        {/* Shounen Suggestions */}
+        <div className='suggestion-box'>
           <Row style={{ marginTop: 30 }}>
             <h4>Shounen Suggestions</h4>
             <CardGroup>
@@ -96,8 +97,10 @@ export default function Home() {
               </Card>
             </CardGroup>
           </Row>
+        </div>
 
-          {/* Shoujo Suggestions */}
+        {/* Shoujo Suggestions */}
+        <div className='suggestion-box'>
           <Row style={{ marginTop: 30 }}>
             <h4>Shoujo Suggestions</h4>
             <CardGroup>
@@ -127,6 +130,7 @@ export default function Home() {
               </Card>
             </CardGroup>
           </Row>
+        </div>
       </Container>
     </>
   );
