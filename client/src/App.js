@@ -38,12 +38,12 @@ function App() {
             <Route path='/' exact component={Home} />
             <Route path='/about-us' component={AboutUs} />
             <Route path='/random-anime' component={RandomAnime} />
+            <Route path='/sign-up' component={SignUp} />
             <Route page='/ranking' component={Ranking} />
             <Route page='/most-popular' component={MostPopular} />
             <Route path='/marketing' component={Marketing} />
             <Route path='/profile' component={Profile} />
             <Route path='/contact-us' component={ContactUs} />
-            <Route path='/sign-up' component={SignUp} />
             <Route page='/settings' component={Settings} />
           </Switch>
         </Router>

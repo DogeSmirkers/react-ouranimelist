@@ -83,6 +83,16 @@ function Navbar() {
           </Link>
         </li>
 
+        <li className='nav-item'>
+            <Link
+              to='/sign-up'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+              Login
+            </Link>
+        </li>
+
         {/* Ranking Page Link */}
         <li
           className='nav-item'
@@ -161,15 +171,6 @@ function Navbar() {
             </Dropdown>
             </Link>
             {/* {dropdown && <Dropdown />} */}
-          </li>
-          <li className='nav-item'>
-            <Link
-              to='/sign-up'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Login
-            </Link>
           </li>
         </ul>
       </nav>
