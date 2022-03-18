@@ -1,18 +1,31 @@
-import express from 'express'
+let express = require('express');
 let router = express.Router();
+var AWS = require("aws-sdk");
 
 // user Model
-let userSchema = require('../models/user');
+//let userTable = require('../models/user');
 // CREATE user
 router.route('/create-user').post((req, res, next) => {
-  userSchema.create(req.body, (error, data) => {
-    if (error) {
-      return next(error)
-    } else {
-      console.log(data)
-      res.json(data)
-    }
-  })
+    var params = {
+        TableName:table,
+        Item:{
+            "email": email,
+            "username": username,
+            "password": password,
+            "joinDate": joinDate,
+            "profilePic": profilePic
+            
+        }
+    };
+        
+    console.log("Adding a new item...");
+    docClient.put(params, function(err, data) {
+        if (err) {
+            console.error("Unable to add item. Error JSON:", JSON.stringify(err, null, 2));
+        } else {
+            console.log("Added item:", JSON.stringify(data, null, 2));
+        }
+    }); 
 });
 /*
 // READ users

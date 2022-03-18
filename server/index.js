@@ -1,7 +1,7 @@
-import AWS from 'aws-sdk'
-import express from 'express'
-import cors from 'cors'
-import bodyParser from 'body-parser'
+let express = require('express');
+let cors = require('cors');
+let bodyParser = require('body-parser');
+var AWS = require("aws-sdk");
 
 // Express Route
 const userRoute = require('../server/routes/user.route')
@@ -22,7 +22,7 @@ app.use(cors());
 app.use('/user', userRoute)
 
 // PORT
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
   console.log('Connected to port ' + port)
 })
