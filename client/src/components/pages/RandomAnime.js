@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 
-export default function Consulting() {
+export default function RandomAnime() {
   return (
     <>
       <Container>

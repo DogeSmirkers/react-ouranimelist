@@ -2,10 +2,10 @@ import React from 'react';
 import '../../App.css';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Stack from 'react-bootstrap/Stack';
 import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -70,32 +70,28 @@ export default function Home() {
         <div className='suggestion-box'>
           <Row style={{ marginTop: 30 }}>
             <h4>Shounen Suggestions</h4>
-            <CardGroup>
-              <Card>
-                <Card.Img variant="top" src={require("../images/naruto.jpg")} />
-              </Card>
-              <Card>
-                <Card.Img variant="top" src={require("../images/naruto.jpg")} />
-              </Card>
-              <Card>
-                <Card.Img variant="top" src={require("../images/naruto.jpg")} />
-              </Card>
-              <Card>
-                <Card.Img variant="top" src={require("../images/naruto.jpg")} />
-              </Card>
-              <Card>
-                <Card.Img variant="top" src={require("../images/naruto.jpg")} />
-              </Card>
-              <Card>
-                <Card.Img variant="top" src={require("../images/naruto.jpg")} />
-              </Card>
-              <Card>
-                <Card.Img variant="top" src={require("../images/naruto.jpg")} />
-              </Card>
-              <Card>
-                <Card.Img variant="top" src={require("../images/naruto.jpg")} />
-              </Card>
-            </CardGroup>
+            <Stack direction="horizontal" gap={3}>
+                <div className='suggestion-card'>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  Naruto
+                </div>
+                <div className='suggestion-card'>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  Naruto
+                </div>
+                <div className='suggestion-card'>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  Naruto
+                </div>
+                <div className='suggestion-card'>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  Naruto
+                </div>
+                <div className='suggestion-card'>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  Naruto
+                </div>
+            </Stack>
           </Row>
         </div>
 
@@ -103,32 +99,28 @@ export default function Home() {
         <div className='suggestion-box'>
           <Row style={{ marginTop: 30 }}>
             <h4>Shoujo Suggestions</h4>
-            <CardGroup>
-              <Card>
-                <Card.Img variant="top" src={require("../images/naruto.jpg")} />
-              </Card>
-              <Card>
-                <Card.Img variant="top" src={require("../images/naruto.jpg")} />
-              </Card>
-              <Card>
-                <Card.Img variant="top" src={require("../images/naruto.jpg")} />
-              </Card>
-              <Card>
-                <Card.Img variant="top" src={require("../images/naruto.jpg")} />
-              </Card>
-              <Card>
-                <Card.Img variant="top" src={require("../images/naruto.jpg")} />
-              </Card>
-              <Card>
-                <Card.Img variant="top" src={require("../images/naruto.jpg")} />
-              </Card>
-              <Card>
-                <Card.Img variant="top" src={require("../images/naruto.jpg")} />
-              </Card>
-              <Card>
-                <Card.Img variant="top" src={require("../images/naruto.jpg")} />
-              </Card>
-            </CardGroup>
+            <Stack direction="horizontal" gap={3}>
+            <div className='suggestion-card'>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  Naruto
+                </div>
+                <div className='suggestion-card'>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  Naruto
+                </div>
+                <div className='suggestion-card'>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  Naruto
+                </div>
+                <div className='suggestion-card'>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  Naruto
+                </div>
+                <div className='suggestion-card'>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  Naruto
+                </div>
+            </Stack>
           </Row>
         </div>
       </Container>
