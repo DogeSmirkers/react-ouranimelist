@@ -1,9 +1,10 @@
 let express = require('express');
 let router = express.Router();
 var AWS = require("aws-sdk");
+const tableUsers = "users" 
 
 // user Model
-//let userTable = require('../models/user');
+// let userTable = require('../models/user');
 // CREATE user
 router.route('/create-user').post((req, res, next) => {
     var params = {
@@ -28,6 +29,7 @@ router.route('/create-user').post((req, res, next) => {
     }); 
 });
 /*
+
 // READ users
 router.route('/').get((req, res) => {
   userSchema.find((error, data) => {
@@ -38,6 +40,7 @@ router.route('/').get((req, res) => {
     }
   })
 })
+
 // Get Single user
 router.route('/edit-user/:id').get((req, res) => {
   userSchema.findById(req.params.id, (error, data) => {
@@ -63,6 +66,7 @@ router.route('/update-usert/:id').put((req, res, next) => {
     }
   })
 })
+
 // Delete user
 router.route('/delete-user/:id').delete((req, res, next) => {
   userSchema.findByIdAndRemove(req.params.id, (error, data) => {
@@ -76,4 +80,10 @@ router.route('/delete-user/:id').delete((req, res, next) => {
   })
 })
 */
-module.exports = router;
+module.exports = {
+  dynamoClient,
+  getMembers,
+  addMember,
+  getMemberById,
+  deleteMember
+}

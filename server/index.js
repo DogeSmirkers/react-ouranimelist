@@ -4,7 +4,7 @@ let bodyParser = require('body-parser');
 var AWS = require("aws-sdk");
 
 // Express Route
-const userRoute = require('../server/routes/user.route')
+// const userRoute = require('../server/routes/user.route')
 
 // Connecting to dynamodb
 AWS.config.update({
