@@ -1,13 +1,21 @@
 let express = require('express');
 let router = express.Router();
 var AWS = require("aws-sdk");
-const tableUsers = "users" 
+const tableUsers = "Users" 
 
 AWS.config.update({
   region: "us-east-1",
   endpoint: "http://localhost:8000"
 });
 
+const docClient = new AWS.DynamoDB.DocumentClient()
+
+// sample table entry
+const user = 
+    {
+        'email': "doge@doge.com",
+        'password': "123doge"
+    }
 
 const createUser = async (user) => {
 
@@ -24,6 +32,16 @@ const createUser = async (user) => {
     }
   })
 
+}
+
+const getUsers = async () => {
+  const params = {
+      TableName: tableUsers
+  }
+
+  const users = await docClient.scan(params).promise()
+  console.log(users)
+  return users
 }
 
 // READ users
@@ -77,13 +95,7 @@ router.route('/delete-user/:id').delete((req, res, next) => {
 })
 */
 
-// sample table entry
-const user = 
-    {
-        email: "doge@doge.com",
-        password: '123doge'
-    }
-
 module.exports = {
+  docClient,
   createUser
 }

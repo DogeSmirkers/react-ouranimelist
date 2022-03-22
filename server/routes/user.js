@@ -4,6 +4,16 @@ const {createUser} = require('../dynamic-doge')
 const router = express.Router();
 router.use(express.json())
 
+router.get('/', async (req, res) => {
+        try {
+                const users = await getUsers()
+                res.json(users)
+        } catch (error) {
+                console.error(err)
+                res.status(500).json({err: `Something went wrong 😭`})
+        }
+})
+
 router.post('/add', async (req, res) => {
         const user = req.body
         try {
