@@ -212,4 +212,34 @@
 .teamLink:hover {
   color: #cc6666;
 }
-
+.random-anime {
+  background-color: #fbcfcd;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  overflow: auto;
+}
+.profile a {
+  color: black;
+}
+.profile a:hover {
+  color: white;
+}
+@media screen and (min-width: 960px) {
+  .profile-column {
+    border-right: 1px solid white;
+  }
+}
+.sign-up-form {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 10px;
+  /* overflow: hidden; */
+}
+.left-form {
+  background-image: url('components/images/loginbackground4.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100%;
+}
