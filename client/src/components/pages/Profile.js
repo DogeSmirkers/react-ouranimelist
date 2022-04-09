@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App.css';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export default function Profile() {
@@ -13,10 +13,15 @@ export default function Profile() {
             <Col lg={3}>
               <img src={require("../images/enteipfp.jpg")} alt="Card image"/>
             </Col>
-            <Col lg={9}>
+            <Col lg={6}>
               <h3> DogeSmirker_CoCo </h3>
               <p> Joined November 6</p>
               <p> "Anime was a mistake" </p>
+            </Col>
+            <Col lg={3}>
+              <Button variant="outline-custom">Edit Profile</Button>
+              <br/><br/>
+              <Button variant="outline-custom">Add Anime</Button>
             </Col>
           </Row>
           <Row style={{ marginTop: 30 }}>

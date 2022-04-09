@@ -230,16 +230,46 @@
     border-right: 1px solid white;
   }
 }
+.btn-outline-custom {
+  background-color: transparent !important;
+  border-color: #000000 !important;
+}
+.btn-outline-custom:hover {
+  background-color: rgb(252, 157, 173) !important;
+  border-color: #000000 !important;
+  color: white !important;
+}
 .sign-up-form {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
-  padding: 10px;
-  /* overflow: hidden; */
+  padding-left: 10px;
+  background-color: white;
+  overflow: hidden;
 }
 .left-form {
   background-image: url('components/images/loginbackground4.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-size: 100%;
+  background-size: 120%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.btn-custom {
+  background-color: pink !important;
+  border: 1px solid pink !important;
+}
+.btn-custom:hover {
+  background-color: rgb(253, 166, 182) !important;
+}
+@media screen and (min-width: 960px) {
+  .right-form img{
+    margin-top: 250px;
+    max-width: 150px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .right-form img{
+    width: 300px;
+  }
 }
