@@ -50,7 +50,6 @@ function Navbar() {
             className='nav-links'
             onClick={closeMobileMenu}
           >
-            
           </Link>
         </li>
 
@@ -84,8 +83,7 @@ function Navbar() {
         </li>
 
         {/* Ranking Page Link */}
-        <li
-          className='nav-item'
+        <li className='nav-item'
           // onMouseEnter={onMouseEnter}
           // onMouseLeave={onMouseLeave}
         >
@@ -94,33 +92,33 @@ function Navbar() {
             className='nav-links'
             onClick={closeMobileMenu}
           >
-            <Dropdown renderMenuOnMount={true}>
-              <Dropdown.Toggle id="dropdown-autoclose-true">
-              Ranking
-              </Dropdown.Toggle>
-              <Dropdown.Menu renderMenuOnMount={true}>
-                {/* Top Anime of All Time Page Link */}
-                <Dropdown.Item>
-                  <Link
-                    to='/marketing'
+          <Dropdown renderMenuOnMount={true}>
+            <Dropdown.Toggle id="dropdown-autoclose-true">
+            Ranking
+            </Dropdown.Toggle>
+            <Dropdown.Menu renderMenuOnMount={true}>
+              {/* Top Anime of All Time Page Link */}
+              <Dropdown.Item>
+                <Link
+                  to='/marketing'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  Top Anime of All Time
+                </Link>
+              </Dropdown.Item>
+
+              {/* Most Popular Page Link */}
+              <Dropdown.Item>
+                <Link
+                    to='/most-popular'
                     className='nav-links'
                     onClick={closeMobileMenu}
-                  >
-                    Top Anime of All Time
-                  </Link>
-                </Dropdown.Item>
-
-                {/* Most Popular Page Link */}
-                <Dropdown.Item>
-                  <Link
-                      to='/most-popular'
-                      className='nav-links'
-                      onClick={closeMobileMenu}
-                  >
-                    Most Popular
-                  </Link>
-                </Dropdown.Item>
-              </Dropdown.Menu>
+                >
+                  Most Popular
+                </Link>
+              </Dropdown.Item>
+            </Dropdown.Menu>
           </Dropdown>
 
           </Link>
@@ -162,7 +160,7 @@ function Navbar() {
             </Link>
             {/* {dropdown && <Dropdown />} */}
           </li>
-          <li className='nav-item'>
+          {/* <li className='nav-item'>
             <Link
               to='/sign-up'
               className='nav-links'
@@ -170,6 +168,11 @@ function Navbar() {
             >
               Login
             </Link>
+          </li> */}
+          <li className='nav-item'>
+          <Link to='/sign-up' className='nav-links' onClick={closeMobileMenu}>
+            Login
+          </Link>
           </li>
         </ul>
       </nav>

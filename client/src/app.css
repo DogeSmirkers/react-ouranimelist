@@ -9,7 +9,7 @@
   background-size: contain;
   background-size: 100%;
   /* box-shadow: 0px 0px 1px black; */
-  padding: 50px;
+  padding: 40px;
 }
 .logoImage {
   height: 200px;
@@ -38,7 +38,22 @@
   padding: 20px;
   border-radius: 15px;
   margin-top: 20px;
+  overflow: auto;
 }
+.suggestion-card {
+  flex: 1 0 21%;
+  text-align: center;
+}
+.suggestion-card:hover {
+  background-image: url('components/images/comicBackground.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
 /* Search Bar */
 /* .searchBox {
   background-color: #fbcfcd;
@@ -47,7 +62,7 @@
 } */
 .searchBar {
   background-color: #fbcfcd;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 .searchBar input[type = "text"] {
   border: 0;
@@ -169,6 +184,17 @@
 .center {
   display: block;
   margin: 0px auto;
+  animation: spin 5s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.about-our-app {
+  text-align: center;
+  border-radius: 10px;
+  background-image: url('components/images/aboutBackground.jpg');
 }
 .centerText {
   text-align: center;
@@ -185,4 +211,35 @@
 }
 .teamLink:hover {
   color: #cc6666;
+}
+.random-anime {
+  background-color: #fbcfcd;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  overflow: auto;
+}
+.profile a {
+  color: black;
+}
+.profile a:hover {
+  color: white;
+}
+@media screen and (min-width: 960px) {
+  .profile-column {
+    border-right: 1px solid white;
+  }
+}
+.sign-up-form {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 10px;
+  /* overflow: hidden; */
+}
+.left-form {
+  background-image: url('components/images/loginbackground4.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100%;
 }
