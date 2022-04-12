@@ -72,7 +72,7 @@ export default function AboutUs() {
         <div><br/></div>
       </Row>
       <Row>
-        <Col>
+        {/* <Col>
           <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" className="img-fluid" src={require('../images/leon_smirk.jpg')} />
             <Card.Body>
@@ -115,7 +115,7 @@ export default function AboutUs() {
               </Card.Text>
             </Card.Body>
           </Card>
-        </Col>
+        </Col> */}
         <Col>
           <img className='teamImg' src={require('../images/leon_smirk.jpg')} height='200px' />
           <h4 className='centerText'><a className='teamLink' href='https://github.com/yelu2021' target="_blank">Leon</a></h4>
@@ -125,7 +125,7 @@ export default function AboutUs() {
           <h4 className='centerText'><a className='teamLink' href='https://github.com/LuongMonica' target="_blank">Monica</a></h4>
         </Col>
         <Col>
-          <img className='teamImg' src={require('../images/kimuwu.jpg')} height='200px' />
+          <img className='teamImg' src={require('../images/kimuwu1.png')} height='200px' />
           <h4 className='centerText'><a className='teamLink' href='https://github.com/kimrenie' target="_blank">Kim</a></h4>
         </Col>
         <Col>

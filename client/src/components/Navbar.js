@@ -5,6 +5,10 @@ import './Navbar.css';
 // import Dropdown from './Dropdown';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import styled from 'styled-components';
+import { Modal } from './Modal';
+import { GlobalStyle } from './../globalStyles';
+import { Button, NavDropdown} from 'react-bootstrap';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -13,21 +17,11 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  // const onMouseEnter = () => {
-  //   if (window.innerWidth < 960) {
-  //     setDropdown(false);
-  //   } else {
-  //     setDropdown(true);
-  //   }
-  // };
+  const [showModal, setShowModal] = useState(false);
 
-  // const onMouseLeave = () => {
-  //   if (window.innerWidth < 960) {
-  //     setDropdown(false);
-  //   } else {
-  //     setDropdown(false);
-  //   }
-  // };
+  const openModal = () => {
+    setShowModal(prev => !prev);
+  };
 
   return (
     <>
@@ -92,24 +86,23 @@ function Navbar() {
             className='nav-links'
             onClick={closeMobileMenu}
           >
-          <Dropdown renderMenuOnMount={true}>
+          <NavDropdown title="Ranking" renderMenuOnMount={true}>
             <Dropdown.Toggle id="dropdown-autoclose-true">
             Ranking
             </Dropdown.Toggle>
-            <Dropdown.Menu renderMenuOnMount={true}>
               {/* Top Anime of All Time Page Link */}
-              <Dropdown.Item>
+              <NavDropdown.Item>
                 <Link
-                  to='/marketing'
+                  to='/topanime'
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
                   Top Anime of All Time
                 </Link>
-              </Dropdown.Item>
+              </NavDropdown.Item>
 
               {/* Most Popular Page Link */}
-              <Dropdown.Item>
+              <NavDropdown.Item>
                 <Link
                     to='/most-popular'
                     className='nav-links'
@@ -117,9 +110,8 @@ function Navbar() {
                 >
                   Most Popular
                 </Link>
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+              </NavDropdown.Item>
+          </NavDropdown>
 
           </Link>
             {/* {dropdown && <Dropdown />} */}
@@ -170,9 +162,17 @@ function Navbar() {
             </Link>
           </li> */}
           <li className='nav-item'>
-          <Link to='/sign-up' className='nav-links' onClick={closeMobileMenu}>
+          {/* <Link to='/sign-up' className='nav-links' onClick={closeMobileMenu}>
             Login
-          </Link>
+          </Link> */}
+          {/* <Link className='nav-links' onClick={() =>{closeMobileMenu(); showModal();}}>
+            Login
+            <Modal showModal={showModal} setShowModal={setShowModal} />
+        <GlobalStyle />
+          </Link> */}
+          <Button onClick={openModal}>Login</Button>
+        <Modal showModal={showModal} setShowModal={setShowModal} />
+        <GlobalStyle />
           </li>
         </ul>
       </nav>
