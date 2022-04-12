@@ -21,16 +21,37 @@ export default function SignUp() {
                       </Form.Group>
                       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" placeholder="name@example.com" />
+                        <Form.Control type="email" placeholder="CoCo@dogesmirker.com" />
                       </Form.Group>
                       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder="D**esm****r" />
                       </Form.Group>
                     </Form>
-                    <Button variant="outline-light">Light</Button>{' '}
+                    <div className='text-center'>
+                      <Button variant="custom"> Sign Up </Button>{' '}
+                    </div>
+                    <hr style={{ backgroundColor: "#00334f", height: 2, width: "100%" }}/>
+                    <h4 style={{ textAlign: 'right'}}> Log In</h4>
+                    <Form>
+                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control type="email" placeholder="CoCo@dogesmirker.com" />
+                      </Form.Group>
+                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" placeholder="D**esm****r" />
+                      </Form.Group>
+                    </Form>
+                    <div className='text-center'>
+                      <Button variant="custom"> Log In </Button>{' '}
+                    </div>
                   </Col>
-                  <Col lg={{ span: 4 }}>Hi</Col>
+                  <Col lg={{ span: 4 }} className="right-form">
+                    <br/>
+                    <img src={require("../images/dogeLick.jpeg")} alt="Card image"/>  
+                    <h4> Pretty, Not Function </h4>
+                  </Col>
               </Row>
             </div>
           </Col>

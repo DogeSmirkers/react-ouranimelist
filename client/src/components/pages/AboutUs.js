@@ -73,7 +73,7 @@ export default function AboutUs() {
       </Row>
       <Row>
         <Col>
-          <Card style={{ width: '18rem' }}>
+          <Card style={{ width: '18rem', height: '377px' }}>
             <Card.Img variant="top" className="img-fluid" src={require('../images/leon_smirk.jpg')} />
             <Card.Body>
               <Card.Title><a className='teamLink' href='https://github.com/yelu2021' target="_blank">Leon</a></Card.Title>
@@ -85,37 +85,39 @@ export default function AboutUs() {
         </Col>
         <Col>
           <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" className="img-fluid" src={require('../images/leon_smirk.jpg')} />
+            <Card.Img variant="top" className="img-fluid" src={require('../images/hawyeepika.png')}/>
             <Card.Body>
-              <Card.Title><a className='teamLink' href='https://github.com/yelu2021' target="_blank">Leon</a></Card.Title>
+              <Card.Title><a className='teamLink' href='https://github.com/LuongMonica' target="_blank">Monica</a></Card.Title>
               <Card.Text>
-                About Leon
+                About Monica
               </Card.Text>
             </Card.Body>
           </Card>
         </Col>
         <Col>
           <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" className="img-fluid" src={require('../images/leon_smirk.jpg')} />
+            <Card.Img variant="top" className="img-fluid" src={require('../images/kimuwu.jpg')}/>
             <Card.Body>
-              <Card.Title><a className='teamLink' href='https://github.com/yelu2021' target="_blank">Leon</a></Card.Title>
+              <Card.Title><a className='teamLink' href='https://github.com/kimrenie' target="_blank">Kim</a></Card.Title>
               <Card.Text>
-                About Leon
+                About Kim
               </Card.Text>
             </Card.Body>
           </Card>
         </Col>
         <Col>
           <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" className="img-fluid" src={require('../images/leon_smirk.jpg')} />
+            <Card.Img variant="top" className="img-fluid" src={require('../images/sleepy_rai.jpg')} />
             <Card.Body>
-              <Card.Title><a className='teamLink' href='https://github.com/yelu2021' target="_blank">Leon</a></Card.Title>
+              <Card.Title><a className='teamLink' href='https://github.com/ShibuyaNobody' target="_blank">Rai</a></Card.Title>
               <Card.Text>
-                About Leon
+                About Rai
               </Card.Text>
             </Card.Body>
           </Card>
         </Col>
+      </Row>
+      <Row>
         <Col>
           <img className='teamImg' src={require('../images/leon_smirk.jpg')} height='200px' />
           <h4 className='centerText'><a className='teamLink' href='https://github.com/yelu2021' target="_blank">Leon</a></h4>
