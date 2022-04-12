@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.1074.0"
+    "aws-sdk": "^2.1074.0",
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
   }
 }
