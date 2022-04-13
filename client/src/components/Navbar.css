@@ -50,6 +50,11 @@
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
+.nav-link {
+  color: #565455;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
 
 .nav-links:hover {
   color: #EEF1F8;
@@ -70,23 +75,24 @@
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+  /* display: block; */
   color: #fff;
 }
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
 }
-.btn-check:active+.btn-primary, .btn-check:checked+.btn-primary, .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle
+/* .btn-check:active+.btn-primary, .btn-check:checked+.btn-primary, .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle
 {
   background-color: #fbcfcd;
   border-color: #fbcfcd;
-}
+} */
 .btn-primary {
   color: #565455;
   background-color: #fbcfcd;
   border-color: #fbcfcd;
   font-size: 15pt;
   padding: 0px;
+  position:relative;
 }
 .btn-primary:hover {
   display: block;
@@ -96,6 +102,12 @@
 .btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus
 {
   box-shadow: 0 0 0 0.25rem #fbcfcd;
+}
+.dropdown-item:hover {
+  background-color: #fbcfcd;
+}
+.nav-links:hover {
+  color: #565455;
 }
 
 @media screen and (max-width: 960px) {

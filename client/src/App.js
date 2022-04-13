@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Marketing from './components/pages/Marketing';
+import TopAnime from './components/pages/TopAnime';
 import RandomAnime from './components/pages/RandomAnime';
 import AboutUs from './components/pages/AboutUs';
 import ContactUs from './components/pages/ContactUs';
@@ -15,6 +15,13 @@ import MostPopular from './components/pages/MostPopular';
 import Ranking from './components/pages/Ranking';
 
 function App() {
+
+  let audio = new Audio("/bark.mp3")
+
+  const start = () => {
+    audio.play()
+  }
+
   return (
     <>
       <div className='body'>
@@ -24,7 +31,7 @@ function App() {
 
           {/* Banner Image with Logo */}
           <div className='bar'>
-            <img className='logoImage' src={ require('./components/images/ouranimelist_icon_pog.png') } />
+            <img className='logoImage' src={ require('./components/images/ouranimelist_icon_pog.png') } onClick={start}/>
           </div>
 
           {/* Search Bar */}
@@ -40,7 +47,7 @@ function App() {
             <Route path='/random-anime' component={RandomAnime} />
             <Route path='/ranking' component={Ranking} />
             <Route path='/most-popular' component={MostPopular} />
-            <Route path='/marketing' component={Marketing} />
+            <Route path='/topanime' component={TopAnime} />
             <Route path='/profile' exact component={Profile} />
             <Route path='/contact-us' component={ContactUs} />
             <Route path='/sign-up' exact component={SignUp} />
@@ -50,7 +57,7 @@ function App() {
 
         {/* Footer */}
         <div className='footer'>
-          <h8>Designed and Managed by <a className='dogesmirk' href="https://github.com/DogeSmirkers" target="_blank"><i>Team DogeSmirk</i> <img src={require('./components/images/dogesmirk.jpg')} alt="" height="16px" width="auto"/></a></h8>
+          <h8>Designed and Managed by <a className='dogesmirk' href="https://github.com/DogeSmirkers" target="_blank"><i>Team DogeSmirk</i></a> <img src={require('./components/images/dogesmirk.jpg')} alt="" height="16px" width="auto" onClick={start}/></h8>
         </div>
     </div>
     </>
