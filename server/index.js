@@ -29,39 +29,21 @@ app.get('/search', (req, res) => {
     res.send(search.Search(query))
 })
 
-const details = require('./Details')
+const getDetails = require('./GetDetails')
 // get anime details 
 app.get('/anime/:id', (req, res) => {
     const id = req.query.id
-    res.send(details.Details(id))
+    res.send(getDetails.GetDetails(id))
 })
 
-// return all anime from specific season
-// @params: year, season, offset, limit, sort, fields
-// const test = anime.animeSeasonal(2021, "summer", 0, 5, "anime_score");
-// test.then(result => {
-//     // still can't unpack nested objects (main_picture) and arrays (genres & studios)
-//     let obj = result.data;
-//     let res = [];
-//     for (let i in obj) {
-//         res.push([i, obj[i]]);
-//     }
-//     for(let i=0; i< res.length; i++) {
-//         //console.log(res[i]);
-//     }
-// }).catch(console.log)
+const getSeasonal = require('./GetSeasonal')
+// get by season
+app.get('/season', (req, res) => {
+    res.send(getSeasonal.GetSeasonal())
+})
 
-//return anime by rank
-//@params: rankingType, offset, limit, fields
-// const test = anime.animeRanking("all", 0, 50);
-// test.then(result => {
-//     // still can't unpack nested objects (main_picture) and arrays (genres & studios)
-//     let obj = result.data;
-//     let res = [];
-//     for (let i in obj) {
-//         res.push([i, obj[i]]);
-//     }
-//     for(let i=0; i< res.length; i++) {
-//         console.log(res[i]);
-//     }
-// }).catch(console.log)
+const getDetails = require('./GetDetails')
+// get anime ranking
+app.get('/ranking', (req, res) => {
+    res.send(getDetails.GetDetails())
+})

@@ -1,15 +1,14 @@
 const {client_id} = require('./config');
 const API = require('./myanimelist-api-v2')
 const anime = new API.API_ANIME(client_id);
-//const structures = require("./myanimelist-api-v2/src/Mal_Api_Authorized/Mal_Api_Anime/structures.json");
+const structures = require("./myanimelist-api-v2/src/Mal_Api_Authorized/Mal_Api_Anime/structures.json");
 // import conversion functions
 const tools = require('./Tools')
 
 module.exports = {
     //search by title
-    Search: function (query) {
-        //@params: query, offset, limit, fields
-        const main = anime.animes(query,0,10);
+    Search: function (query, offset=0, limit=10, fields=structures) {
+        const main = anime.animes(query, offset, limit, fields);
         main.then(result => {
 
             // relevant api data for each anime
