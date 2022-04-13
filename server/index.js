@@ -9,7 +9,6 @@
 const express = require('express');
 const path = require('path');
 const axios = require('axios');
-const {client_id} = require('./config');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
@@ -23,13 +22,13 @@ app.listen(PORT, () => {
   console.log(`OurAnimeList is listening at http://localhost:${PORT}`);
 })
 
-const API = require('./myanimelist-api-v2')
-const anime = new API.API_ANIME(client_id);
-//const structures = require("./myanimelist-api-v2/src/Mal_Api_Authorized/Mal_Api_Anime/structures.json");
-const tools = require('./Tools')
-
+const search = require('./Search')
 // search by title
 const query = "odd taxi"
+app.get('/random-anime', (req, res) => {
+    res.send('Random')
+    search.Search(query)
+})
 
 // get full details of specific anime by id
 //const id = "21"
