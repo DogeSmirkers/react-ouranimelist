@@ -5,11 +5,11 @@ const anime = new API.API_ANIME(client_id);
 // import conversion functions
 const tools = require('./Tools')
 
-//search by title
 module.exports = {
+    //search by title
     Search: function (query) {
         //@params: query, offset, limit, fields
-        const main = anime.animes(query,0,1);
+        const main = anime.animes(query,0,10);
         main.then(result => {
 
             // relevant api data for each anime
@@ -27,7 +27,7 @@ module.exports = {
             if (typeof result.data[0].node.rank !== "undefined") {let rank = result.data[0].node.rank}
             if (typeof result.data[0].node.studios !== "undefined") {let studiosObj = result.data[0].node.studios}
             if (typeof result.data[0].node.id !== "undefined") {let id = result.data[0].node.id}
-            console.log(data);
+            //console.log(data);
 
             // convert some data to more readable formats 
             if (typeof start_date !== "undefined") {start_date = tools.convertDate(start_date)}
