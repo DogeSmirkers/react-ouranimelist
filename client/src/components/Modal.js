@@ -133,7 +133,7 @@ export const Modal = ({ showModal, setShowModal }) => {
             </ModalWrapper>
           </animated.div>
         </Background>
-      ) : null} 
+      ) : null}
     </>
   );
 };
