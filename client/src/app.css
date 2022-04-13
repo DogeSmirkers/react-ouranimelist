@@ -233,6 +233,15 @@
     border-right: 1px solid white;
   }
 }
+.btn-outline-custom {
+  background-color: transparent !important;
+  border-color: #000000 !important;
+}
+.btn-outline-custom:hover {
+  background-color: rgb(252, 157, 173) !important;
+  border-color: #000000 !important;
+  color: white !important;
+}
 .sign-up-form {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
   border-radius: 10px;

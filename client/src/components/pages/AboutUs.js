@@ -72,50 +72,6 @@ export default function AboutUs() {
         <div><br/></div>
       </Row>
       <Row>
-        {/* <Col>
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" className="img-fluid" src={require('../images/leon_smirk.jpg')} />
-            <Card.Body>
-              <Card.Title><a className='teamLink' href='https://github.com/yelu2021' target="_blank">Leon</a></Card.Title>
-              <Card.Text>
-                About Leon
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col>
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" className="img-fluid" src={require('../images/leon_smirk.jpg')} />
-            <Card.Body>
-              <Card.Title><a className='teamLink' href='https://github.com/yelu2021' target="_blank">Leon</a></Card.Title>
-              <Card.Text>
-                About Leon
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col>
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" className="img-fluid" src={require('../images/leon_smirk.jpg')} />
-            <Card.Body>
-              <Card.Title><a className='teamLink' href='https://github.com/yelu2021' target="_blank">Leon</a></Card.Title>
-              <Card.Text>
-                About Leon
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col>
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" className="img-fluid" src={require('../images/leon_smirk.jpg')} />
-            <Card.Body>
-              <Card.Title><a className='teamLink' href='https://github.com/yelu2021' target="_blank">Leon</a></Card.Title>
-              <Card.Text>
-                About Leon
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col> */}
         <Col>
           <img className='teamImg' src={require('../images/leon_smirk.jpg')} height='200px' />
           <h4 className='centerText'><a className='teamLink' href='https://github.com/yelu2021' target="_blank">Leon</a></h4>
