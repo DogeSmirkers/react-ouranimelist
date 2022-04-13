@@ -39,7 +39,7 @@ module.exports = {
                 res.push([i, obj[i]]);
             }
             for(let i=0; i< res.length; i++) {
-                //console.log(res[i]);
+                console.log(res[i]);
             }
         }).catch(console.log)
     }

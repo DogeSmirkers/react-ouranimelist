@@ -18,10 +18,6 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.listen(PORT, () => {
-  console.log(`OurAnimeList is listening at http://localhost:${PORT}`);
-})
-
 const search = require('./Search')
 // search by title
 app.get('/search', (req, res) => {
@@ -42,8 +38,12 @@ app.get('/season', (req, res) => {
     res.send(getSeasonal.GetSeasonal())
 })
 
-const getDetails = require('./GetDetails')
+const getRanking = require('./GetRanking')
 // get anime ranking
 app.get('/ranking', (req, res) => {
-    res.send(getDetails.GetDetails())
+    res.send(getRanking.GetRanking())
+})
+
+app.listen(PORT, () => {
+    console.log(`OurAnimeList is listening at http://localhost:${PORT}`);
 })
