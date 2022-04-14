@@ -23,14 +23,13 @@ module.exports = {
     GetSeasonal: function (year=new Date().getFullYear(), season=getSeasonForNumberMonth(new Date().getMonth()), offset=0, limit=20, sort="anime_score", fields=structures.animeInList) {
         const main = anime.animeSeasonal(year, season, offset, limit, sort, fields)
         main.then(result => {
-            // still can't unpack nested objects (main_picture) and arrays (genres & studios)
             let obj = result.data;
             let res = [];
             for (let i in obj) {
                 res.push([i, obj[i]]);
             }
             for(let i=0; i< res.length; i++) {
-                console.log(res[i]);
+                console.log(res[i][1]['node']);
             }
         }).catch(console.log)
     }

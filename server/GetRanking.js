@@ -10,14 +10,13 @@ module.exports = {
     GetRanking: function (rankingType="all", offset=0, limit=20, fields=structures.animeFull){
         const main = anime.animeRanking(rankingType, offset, limit, fields);
         main.then(result => {
-            // still can't unpack nested objects (main_picture) and arrays (genres & studios)
             let obj = result.data;
             let res = [];
             for (let i in obj) {
                 res.push([i, obj[i]]);
             }
             for(let i=0; i< res.length; i++) {
-                console.log(res[i]);
+                console.log(res[i][1]['node']);
             }
         }).catch(console.log)
     }
