@@ -88,7 +88,7 @@ function Navbar() {
           >
           <NavDropdown title="Ranking" renderMenuOnMount={true}>
             <Dropdown.Toggle id="dropdown-autoclose-true">
-            Ranking
+            {/* Ranking */}
             </Dropdown.Toggle>
               {/* Top Anime of All Time Page Link */}
               <NavDropdown.Item>
@@ -116,41 +116,29 @@ function Navbar() {
           </Link>
             {/* {dropdown && <Dropdown />} */}
           </li>
-          <li
-            className='nav-item'
-            // onMouseEnter={onMouseEnter}
-            // onMouseLeave={onMouseLeave}
+          <li className='nav-item'        >
+          <Link
+            to='/profile'
+            className='nav-links'
+            onClick={closeMobileMenu}
           >
-            <Link
-              to='/contact-us'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              {/* Ranking <i className='fas fa-caret-down' /> */}
-              <Dropdown renderMenuOnMount={true}>
-                <Dropdown.Toggle id="dropdown-autoclose-true">
-                  <Link
-                    to='/profile'
-                    className='nav-links'
-                    onClick={closeMobileMenu}>
-                    Profile
-                  </Link>
-                </Dropdown.Toggle>
+          <NavDropdown title="Profile" renderMenuOnMount={true}>
+            <Dropdown.Toggle id="dropdown-autoclose-true">
+            {/* Profile */}
+            </Dropdown.Toggle>
+              {/* Settings Page Link */}
+              <NavDropdown.Item>
+                <Link
+                  to='/Settings'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  Settings
+                </Link>
+              </NavDropdown.Item>
+          </NavDropdown>
 
-                <Dropdown.Menu renderMenuOnMount={true}>
-                  <Dropdown.Item>
-                    <Link
-                    to='/settings'
-                    className='nav-links'
-                    onClick={closeMobileMenu}
-                    >
-                      Settings
-                    </Link>
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>
-            </Link>
-            {/* {dropdown && <Dropdown />} */}
+          </Link>
           </li>
           {/* <li className='nav-item'>
             <Link

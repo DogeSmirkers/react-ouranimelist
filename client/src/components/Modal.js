@@ -19,7 +19,7 @@ const Background = styled.div`
 
 const ModalWrapper = styled.div`
   width: 800px;
-  height: 600px;
+  height: 730px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: #fff;
   color: #000;
@@ -49,9 +49,14 @@ const ModalContent = styled.div`
   }
   button {
     padding: 10px 24px;
-    background: #141414;
-    color: #fff;
+    background: #fbcfcd;
+    color: #565455;
     border: none;
+  }
+  button:hover {
+    color: #565455;
+    background: none;
+    outline: 2px solid #fbcfcd;
   }
 `;
 
@@ -107,7 +112,7 @@ export const Modal = ({ showModal, setShowModal }) => {
         <Background onClick={closeModal} ref={modalRef}>
           <animated.div style={animation}>
             <ModalWrapper showModal={showModal}>
-              <ModalImg src={require('./images/loginbackground4.png')} alt='camera' />
+              <ModalImg src={require('./images/loginbackground4.png')} alt=' ' />
               <ModalContent>
               <h4 style={{ textAlign: 'right'}}> Sign Up</h4>
                     <Form>
@@ -117,14 +122,31 @@ export const Modal = ({ showModal, setShowModal }) => {
                       </Form.Group>
                       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" placeholder="name@example.com" />
+                        <Form.Control type="email" placeholder="CoCo@dogesmirker.com" />
                       </Form.Group>
                       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder="D**esm****r" />
                       </Form.Group>
                     </Form>
-                    <Button variant="outline-light">Light</Button>{' '}
+                    <div className='text-center'>
+                      <Button variant="custom"> Sign Up </Button>{' '}
+                    </div>
+                    <hr style={{ backgroundColor: "#00334f", height: 2, width: "100%" }}/>
+                    <h4 style={{ textAlign: 'right'}}> Log In</h4>
+                    <Form>
+                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control type="email" placeholder="CoCo@dogesmirker.com" />
+                      </Form.Group>
+                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" placeholder="D**esm****r" />
+                      </Form.Group>
+                    </Form>
+                    <div className='text-center'>
+                      <Button variant="custom"> Log In </Button>{' '}
+                    </div>
               </ModalContent>
               <CloseModalButton
                 aria-label='Close modal'
