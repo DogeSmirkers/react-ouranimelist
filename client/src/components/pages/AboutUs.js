@@ -4,6 +4,11 @@ import '../../App.css';
 import Marquee from 'react-fast-marquee';
 
 export default function AboutUs() {
+  let audio = new Audio("/bark.mp3")
+
+  const start = () => {
+    audio.play()
+  }
   return (
     <>
       <div className='bgColor'>
@@ -73,20 +78,20 @@ export default function AboutUs() {
       </Row>
       <Row>
         <Col>
-          <img className='teamImg' src={require('../images/leon_smirk.jpg')} height='200px' />
-          <h4 className='centerText'><a className='teamLink' href='https://github.com/yelu2021' target="_blank">Leon</a></h4>
+          <img className='teamImg' src={require('../images/leon_smirk.jpg')} height='200px' onClick={start}/>
+          <h4 className='centerTextTeam'><a className='teamLink' href='https://github.com/yelu2021' target="_blank">Leon</a></h4>
         </Col>
         <Col>
-          <img className='teamImg' src={require('../images/hawyeepika.png')} height='200px' />
-          <h4 className='centerText'><a className='teamLink' href='https://github.com/LuongMonica' target="_blank">Monica</a></h4>
+          <img className='teamImg' src={require('../images/hawyeepika.png')} height='200px' onClick={start}/>
+          <h4 className='centerTextTeam'><a className='teamLink' href='https://github.com/LuongMonica' target="_blank">Monica</a></h4>
         </Col>
         <Col>
-          <img className='teamImg' src={require('../images/kimuwu1.png')} height='200px' />
-          <h4 className='centerText'><a className='teamLink' href='https://github.com/kimrenie' target="_blank">Kim</a></h4>
+          <img className='teamImg' src={require('../images/kimuwu1.png')} height='200px' onClick={start}/>
+          <h4 className='centerTextTeam'><a className='teamLink' href='https://github.com/kimrenie' target="_blank">Kim</a></h4>
         </Col>
         <Col>
-          <img className='teamImg' src={require('../images/sleepy_rai.jpg')} height='200px' />
-          <h4 className='centerText'><a className='teamLink' href='https://github.com/ShibuyaNobody' target="_blank">Rai</a></h4>
+          <img className='teamImg' src={require('../images/sleepy_rai.jpg')} height='200px' onClick={start}/>
+          <h4 className='centerTextTeam'><a className='teamLink' href='https://github.com/ShibuyaNobody' target="_blank">Rai</a></h4>
         </Col>
       </Row>
       </Container>

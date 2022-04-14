@@ -202,6 +202,10 @@
 .centerText {
   text-align: center;
 }
+.centerTextTeam {
+  text-align: center;
+  padding-top: 10px;
+}
 .teamImg {
   border-radius: 50%;
   display: block;
