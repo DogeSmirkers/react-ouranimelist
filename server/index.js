@@ -41,7 +41,8 @@ app.get('/season', (req, res) => {
 const getRanking = require('./GetRanking')
 // get anime ranking
 app.get('/ranking', (req, res) => {
-    res.send(getRanking.GetRanking())
+    let data = getRanking.GetRanking()
+    res.send(data)
 })
 
 app.listen(PORT, () => {

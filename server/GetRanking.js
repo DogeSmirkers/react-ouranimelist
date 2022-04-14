@@ -8,8 +8,8 @@ const tools = require('./Tools')
 module.exports = {
     // return anime by rank
     GetRanking: function (rankingType="all", offset=0, limit=20, fields=structures.animeFull){
-        const main = anime.animeRanking(rankingType, offset, limit, fields);
-        main.then(result => {
+        const main = anime.animeRanking(rankingType, offset, limit, fields)
+        .then(result => {
             let obj = result.data;
             let res = [];
             for (let i in obj) {
@@ -18,6 +18,7 @@ module.exports = {
             for(let i=0; i< res.length; i++) {
                 console.log(res[i][1]['node']);
             }
-        }).catch(console.log)
+        })
+        .catch(console.log)
     }
 }

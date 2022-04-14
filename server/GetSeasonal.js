@@ -22,7 +22,7 @@ module.exports = {
     //return all anime from specific season
     GetSeasonal: function (year=new Date().getFullYear(), season=getSeasonForNumberMonth(new Date().getMonth()), offset=0, limit=20, sort="anime_score", fields=structures.animeInList) {
         const main = anime.animeSeasonal(year, season, offset, limit, sort, fields)
-        main.then(result => {
+        .then(result => {
             let obj = result.data;
             let res = [];
             for (let i in obj) {
@@ -31,6 +31,7 @@ module.exports = {
             for(let i=0; i< res.length; i++) {
                 console.log(res[i][1]['node']);
             }
+            return result.data
         }).catch(console.log)
     }
 }

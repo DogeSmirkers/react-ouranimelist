@@ -8,9 +8,8 @@ const tools = require('./Tools')
 module.exports = {
     //search by title
     Search: function (query, offset=0, limit=10, fields=structures.animeInList) {
-        const main = anime.animes(query, offset, limit, fields);
-        main.then(result => {
-
+        const main = anime.animes(query, offset, limit, fields)
+        .then(result => {
             // relevant api data for each anime
             if (typeof result.data[0].node !== "undefined") {let data = result.data[0].node}
             if (typeof result.data[0].node.title !== "undefined") {let title = result.data[0].node.title}
@@ -44,7 +43,7 @@ module.exports = {
                 res.push([i, obj[i]]);
             }
             for(let i=0; i< res.length; i++) {
-                //console.log(res[i]);
+                console.log(res[i]);
             }
         }).catch(console.log)
     }

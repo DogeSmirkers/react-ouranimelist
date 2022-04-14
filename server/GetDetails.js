@@ -9,8 +9,8 @@ module.exports = {
     // get full details of specific anime by id
     GetDetails: function (id, fields=structures.animeFull) {
         //@params: id, fields
-        const main = anime.anime(id, fields);
-        main.then(result => {
+        const main = anime.anime(id, fields)
+        .then(result => {
             // set each data field to var
             if (typeof result.title !== "undefined") {let title = result.title}
             if (typeof result.main_picture_medium !== "undefined") {let main_pic_med = result.main_picture.medium}
