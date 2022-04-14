@@ -35,7 +35,7 @@ app.get('/anime/:id', (req, res) => {
 const getSeasonal = require('./GetSeasonal')
 // get by season
 app.get('/season', (req, res) => {
-    res.send(getSeasonal.GetSeasonal())
+    res.send(getSeasonal.GetSeasonal('', 'f'))
 })
 
 const getRanking = require('./GetRanking')
@@ -45,5 +45,5 @@ app.get('/ranking', (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`OurAnimeList is listening at http://localhost:${PORT}`);
+    console.log(`OurAnimeList is listening at http://localhost:${PORT}`); 
 })

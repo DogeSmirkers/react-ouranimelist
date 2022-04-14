@@ -18,15 +18,6 @@ function getSeasonForNumberMonth(month) {
     }
 }
 
-function checkIfMonthIsValid(month) {
-    months = ["winter", "spring", "summer", "fall"];
-    if (months.indexOf(month) != -1) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
 module.exports = { 
     //return all anime from specific season
     GetSeasonal: function (year=new Date().getFullYear(), season=getSeasonForNumberMonth(new Date().getMonth()), offset=0, limit=50, sort="anime_score", fields=structures) {
