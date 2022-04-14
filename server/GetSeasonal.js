@@ -20,7 +20,7 @@ function getSeasonForNumberMonth(month) {
 
 module.exports = { 
     //return all anime from specific season
-    GetSeasonal: function (year=new Date().getFullYear(), season=getSeasonForNumberMonth(new Date().getMonth()), offset=0, limit=50, sort="anime_score", fields=structures) {
+    GetSeasonal: function (year=new Date().getFullYear(), season=getSeasonForNumberMonth(new Date().getMonth()), offset=0, limit=20, sort="anime_score", fields=structures.animeInList) {
         const main = anime.animeSeasonal(year, season, offset, limit, sort, fields)
         main.then(result => {
             // still can't unpack nested objects (main_picture) and arrays (genres & studios)

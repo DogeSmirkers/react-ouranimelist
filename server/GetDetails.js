@@ -7,7 +7,7 @@ const tools = require('./Tools')
 
 module.exports = {
     // get full details of specific anime by id
-    GetDetails: function (id, fields=structures) {
+    GetDetails: function (id, fields=structures.animeFull) {
         //@params: id, fields
         const main = anime.anime(id, fields);
         main.then(result => {

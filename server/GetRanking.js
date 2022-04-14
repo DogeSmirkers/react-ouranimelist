@@ -7,7 +7,7 @@ const tools = require('./Tools')
 
 module.exports = {
     // return anime by rank
-    GetRanking: function (rankingType="all", offset=0, limit=20, fields=structures){
+    GetRanking: function (rankingType="all", offset=0, limit=20, fields=structures.animeFull){
         const main = anime.animeRanking(rankingType, offset, limit, fields);
         main.then(result => {
             // still can't unpack nested objects (main_picture) and arrays (genres & studios)

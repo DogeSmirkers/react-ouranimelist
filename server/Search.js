@@ -7,7 +7,7 @@ const tools = require('./Tools')
 
 module.exports = {
     //search by title
-    Search: function (query, offset=0, limit=10, fields=structures) {
+    Search: function (query, offset=0, limit=10, fields=structures.animeInList) {
         const main = anime.animes(query, offset, limit, fields);
         main.then(result => {
 

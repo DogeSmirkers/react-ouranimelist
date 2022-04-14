@@ -35,7 +35,7 @@ app.get('/anime/:id', (req, res) => {
 const getSeasonal = require('./GetSeasonal')
 // get by season
 app.get('/season', (req, res) => {
-    res.send(getSeasonal.GetSeasonal('', 'f'))
+    res.send(getSeasonal.GetSeasonal())
 })
 
 const getRanking = require('./GetRanking')

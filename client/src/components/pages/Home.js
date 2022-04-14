@@ -66,58 +66,58 @@ export default function Home() {
           </Row>
         </div>
 
-        {/* Shounen Suggestions */}
+        {/* Seasonal Anime */}
         <div className='suggestion-box'>
           <Row style={{ marginTop: 30 }}>
-            <h4>Shounen Suggestions</h4>
+            <h4>Seasonal Anime</h4>
             <Stack direction="horizontal" gap={3}>
                 <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
                   Naruto
                 </div>
                 <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
                   Naruto
                 </div>
                 <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
                   Naruto
                 </div>
                 <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
                   Naruto
                 </div>
                 <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
                   Naruto
                 </div>
             </Stack>
           </Row>
         </div>
 
-        {/* Shoujo Suggestions */}
+        {/* Top Anime of All Time */}
         <div className='suggestion-box'>
           <Row style={{ marginTop: 30 }}>
-            <h4>Shoujo Suggestions</h4>
+            <h4>Top Anime of All Time</h4>
             <Stack direction="horizontal" gap={3}>
             <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
                   Naruto
                 </div>
                 <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
                   Naruto
                 </div>
                 <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
                   Naruto
                 </div>
                 <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
                   Naruto
                 </div>
                 <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image"/></Link>
+                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
                   Naruto
                 </div>
             </Stack>
