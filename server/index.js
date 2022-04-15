@@ -28,7 +28,7 @@ app.get('/search', (req, res) => {
 const getDetails = require('./GetDetails')
 // get anime details 
 app.get('/anime/:id', (req, res) => {
-    const id = req.query.id
+    const id = req.params.id
     res.send(getDetails.GetDetails(id))
 })
 
