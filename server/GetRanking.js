@@ -10,15 +10,27 @@ module.exports = {
     GetRanking: function (rankingType="all", offset=0, limit=20, fields=structures.animeFull){
         const main = anime.animeRanking(rankingType, offset, limit, fields)
         .then(result => {
+            console.log(result.data)
             let obj = result.data;
             let res = [];
             for (let i in obj) {
                 res.push([i, obj[i]]);
             }
             for(let i=0; i< res.length; i++) {
-                console.log(res[i][1]['node']);
+                //console.log(res[i][1]['node']);
             }
-        })
-        .catch(console.log)
+        }).catch(console.log)
+        // .then((response) => response)
+        // .then((data) => {
+        //     return data;
+        // })
+        // .catch(console.log)
+
+        // const printData = () => {
+        //     data.then((a) => {
+        //         console.log(a);
+        //     });
+        // };
+        // printData()
     }
 }

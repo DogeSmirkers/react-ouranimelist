@@ -31,7 +31,6 @@ module.exports = {
             for(let i=0; i< res.length; i++) {
                 console.log(res[i][1]['node']);
             }
-            return result.data
         }).catch(console.log)
     }
 }

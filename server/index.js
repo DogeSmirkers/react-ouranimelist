@@ -34,7 +34,7 @@ app.get('/anime/:id', (req, res) => {
 
 const getSeasonal = require('./GetSeasonal')
 // get by season
-app.get('/season', (req, res) => {
+app.get('/seasonal', (req, res) => {
     res.send(getSeasonal.GetSeasonal())
 })
 

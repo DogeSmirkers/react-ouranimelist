@@ -10,31 +10,35 @@ module.exports = {
     Search: function (query, offset=0, limit=10, fields=structures.animeInList) {
         const main = anime.animes(query, offset, limit, fields)
         .then(result => {
-            // relevant api data for each anime
-            if (typeof result.data[0].node !== "undefined") {let data = result.data[0].node}
-            if (typeof result.data[0].node.title !== "undefined") {let title = result.data[0].node.title}
-            if (typeof result.data[0].node.main_picture.medium !== "undefined") {let main_pic_med = result.data[0].node.main_picture.medium}
-            if (typeof result.data[0].node.main_picture.large !== "undefined") {let main_pic_large = result.data[0].node.main_picture.large}
-            if (typeof result.data[0].node.start_date !== "undefined") {let start_date = result.data[0].node.start_date}
-            if (typeof result.data[0].node.end_date !== "undefined") {let end_date = result.data[0].node.end_date}
-            if (typeof result.data[0].node.synopsis !== "undefined") {let synopsis = result.data[0].node.synopsis}
-            if (typeof result.data[0].node.status !== "undefined") {let currStatus = result.data[0].node.status}
-            if (typeof result.data[0].node.num_episodes !== "undefined") {let num_ep = result.data[0].node.num_episodes}
-            if (typeof result.data[0].node.genres !== "undefined") {let genresObj = result.data[0].node.genres}
-            if (typeof result.data[0].node.mean !== "undefined") {let score = result.data[0].node.mean}
-            if (typeof result.data[0].node.rank !== "undefined") {let rank = result.data[0].node.rank}
-            if (typeof result.data[0].node.studios !== "undefined") {let studiosObj = result.data[0].node.studios}
-            if (typeof result.data[0].node.id !== "undefined") {let id = result.data[0].node.id}
-            //console.log(data);
+
+            // curr for only the first result in list, otherwise look at other API calls for looping
+
+            // set each data field to var if it exists
+            data = tools.setData(result.data[0].node);
+            title = tools.setData(result.data[0].node.title);
+            main_picture_medium = tools.setData(result.data[0].node.main_picture.medium);
+            main_picture_large = tools.setData(result.data[0].node.main_picture.large);
+            if (typeof result.data[0].node.main_picture !== "undefined" && typeof result.data[0].node.main_picture.medium !== "undefined") {let main_pic_med = result.data[0].node.main_picture.medium}
+            if (typeof result.data[0].node.main_picture !== "undefined" && typeof result.data[0].node.main_picture.large !== "undefined") {let main_pic_large = result.data[0].node.main_picture.large}
+            start_date = tools.setData(result.data[0].node.start_date);
+            end_date = tools.setData(result.data[0].node.end_date);
+            synopsis = tools.setData(result.data[0].node.synopsis);
+            currStatus = tools.setData(result.data[0].node.status);
+            num_ep = tools.setData(result.data[0].node.num_episodes);
+            genresObj = tools.setData(result.data[0].node.genres);
+            studiosObj = tools.setData(result.data[0].node.studios);
+            mean = tools.setData(result.data[0].node.mean);
+            rank = tools.setData(result.data[0].node.rank);
+            id = tools.setData(result.data[0].node.id);
 
             // convert some data to more readable formats 
-            if (typeof start_date !== "undefined") {start_date = tools.convertDate(start_date)}
-            if (typeof end_date !== "undefined") {end_date = tools.convertDate(end_date)}
-            if (typeof currStatus !== "undefined") {currStatus = tools.convertStatus(currStatus)}
+            start_date = tools.convertIfExists(start_date);
+            end_date = tools.convertIfExists(end_date);
+            if (typeof currStatus !== "undefined") { currStatus = tools.convertStatus(currStatus)}
             if (typeof synopsis !== "undefined") {synopsis = synopsis.split('[')[0]}
-            if (typeof genresObj !== "undefined") {let genres = tools.convertObj(genresObj)}
-            if (typeof studiosObj !== "undefined") {let studios = tools.convertObj(studiosObj)}
             if (typeof rank !== "undefined") {rank = "#" + rank}
+            genres = tools.convertIfExists(genresObj);
+            studios = tools.convertIfExists(studiosObj);
 
             // loop through json response
             let obj = result.data[0].node;
@@ -43,7 +47,7 @@ module.exports = {
                 res.push([i, obj[i]]);
             }
             for(let i=0; i< res.length; i++) {
-                console.log(res[i]);
+                //console.log(res[i]);
             }
         }).catch(console.log)
     }
