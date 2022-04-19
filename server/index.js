@@ -27,18 +27,22 @@ const search = require('./Search')
 // search by title
 app.get('/search', (req, res) => {
     const query = req.query
-    res.send(search.Search(query))
+    search.Search(query)
+    .then(data => {
+        res.status(200).send(data);
+    })
+    //.catch(res.status(404).send(`Error! Something went wrong!`))
 })
 
 const getDetails = require('./GetDetails')
 // get anime details 
-app.get('/anime/:id', (req, res) => {
-    const id = req.params.id
+app.get('/anime/:id', (req, res, next) => {
+    const id = req.params.id;
     getDetails.GetDetails(id)
     .then(data => {
-        res.status(200).send(data)
+        res.status(200).send(data);
     })
-    .catch(res.status(404).send(`Error! Anime with ID ${id} doesn\'t exist.`))
+    //.catch(res.status(404).send(`Error! Anime with ID ${id} doesn\'t exist. 😓`))
 })
 
 const getSeasonal = require('./GetSeasonal')
@@ -48,7 +52,6 @@ app.get('/seasonal', (req, res) => {
 })
 
 const getRanking = require('./GetRanking');
-const GetDetails = require('./GetDetails');
 // get anime ranking
 app.get('/ranking', (req, res) => {
     let data = getRanking.GetRanking()
