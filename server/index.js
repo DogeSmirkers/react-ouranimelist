@@ -30,30 +30,15 @@ app.get('/search', (req, res) => {
     res.send(search.Search(query))
 })
 
-// function GetAnimeDetails (id, fields=structures.animeFull) {
-//     //@params: id, fields
-//     const main = anime.anime(id, fields)
-//     .then((data) => {
-//         return data; 
-//     });
-
-//     // const printDetails = async () => {
-//     //     main.then((a) => {
-//     //         console.log(a);
-//     //     });
-//     // }
-//     // printDetails();
-// }
-
-//const getDetails = require('./GetDetails')
+const getDetails = require('./GetDetails')
 // get anime details 
 app.get('/anime/:id', (req, res) => {
     const id = req.params.id
-    
-    const main = anime.anime(id, fields=structures.animeFull)
-    .then((data) => {
+    getDetails.GetDetails(id)
+    .then(data => {
         res.status(200).send(data)
-    });
+    })
+    .catch(res.status(404).send(`Error! Anime with ID ${id} doesn\'t exist.`))
 })
 
 const getSeasonal = require('./GetSeasonal')

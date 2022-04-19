@@ -10,16 +10,8 @@ module.exports = {
     GetDetails: function (id, fields=structures.animeFull) {
         //@params: id, fields
         const main = anime.anime(id, fields)
-        .then((data) => {
-            return data; 
-        });
-
-        const printDetails = async () => {
-            main.then((a) => {
-                console.log(a);
-            });
-        }
-        printDetails()
+        return main
+        .catch(console.log)
         // .then(result => {
 
         //     // set each data field to var if it exists
