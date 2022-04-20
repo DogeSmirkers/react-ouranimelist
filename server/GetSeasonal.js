@@ -22,15 +22,18 @@ module.exports = {
     //return all anime from specific season
     GetSeasonal: function (year=new Date().getFullYear(), season=getSeasonForNumberMonth(new Date().getMonth()), offset=0, limit=20, sort="anime_score", fields=structures.animeInList) {
         const main = anime.animeSeasonal(year, season, offset, limit, sort, fields)
-        .then(result => {
-            let obj = result.data;
-            let res = [];
-            for (let i in obj) {
-                res.push([i, obj[i]]);
-            }
-            for(let i=0; i< res.length; i++) {
-                console.log(res[i][1]['node']);
-            }
-        }).catch(console.log)
+        // not printing current season, should be spring 2022 but it's doing fall 2022
+        console.log(year, season)
+        return main
+        // .then(result => {
+        //     let obj = result.data;
+        //     let res = [];
+        //     for (let i in obj) {
+        //         res.push([i, obj[i]]);
+        //     }
+        //     for(let i=0; i< res.length; i++) {
+        //         console.log(res[i][1]['node']);
+        //     }
+        // }).catch(console.log)
     }
 }

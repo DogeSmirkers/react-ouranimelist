@@ -47,15 +47,22 @@ app.get('/anime/:id', (req, res, next) => {
 
 const getSeasonal = require('./GetSeasonal')
 // get by season
-app.get('/seasonal', (req, res) => {
-    res.send(getSeasonal.GetSeasonal())
+app.get('/seasonal', (req, res, next) => {
+    getSeasonal.GetSeasonal()
+    .then(data => {
+        res.status(200).send(data);
+    })
+    .catch(next)
 })
 
 const getRanking = require('./GetRanking');
 // get anime ranking
-app.get('/ranking', (req, res) => {
-    let data = getRanking.GetRanking()
-    res.send(data)
+app.get('/ranking', (req, res, next) => {
+    getRanking.GetRanking()
+    .then(data => {
+        res.status(200).send(data);
+    })
+    .catch(next)
 })
 
 // error handling
@@ -79,7 +86,7 @@ app.use((error, req, res, next) => {
         let id = path[2];
         res.status(404).send(`Error! Anime with ID \'${id}\' doesn\'t exist. 😓`);
     }
-    
+
     else 
         res.status(500).send(error)
         
