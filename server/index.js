@@ -86,7 +86,8 @@ app.use((error, req, res, next) => {
         let id = path[2];
         res.status(404).send(`Error! Anime with ID \'${id}\' doesn\'t exist. 😓`);
     }
-
+    // should add more specific errors for each route
+    // ex: for /ranking can search with diff ranking types and can produce error for invalid ranking type
     else 
         res.status(500).send(error)
         
