@@ -10,7 +10,6 @@ module.exports = {
     Search: function (query, offset=0, limit=10, fields=structures.animeInList) {
         const main = anime.animes(query, offset, limit, fields)
         return main
-        .catch(console.log)
         // .then(result => {
 
         //     // curr for only the first result in list, otherwise look at other API calls for looping

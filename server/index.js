@@ -25,13 +25,13 @@ app.get('/', (req, res) => {
 
 const search = require('./Search')
 // search by title
-app.get('/search', (req, res) => {
+app.get('/search', (req, res, next) => {
     const query = req.query
     search.Search(query)
     .then(data => {
         res.status(200).send(data);
     })
-    //.catch(res.status(404).send(`Error! Something went wrong!`))
+    .catch(next)
 })
 
 const getDetails = require('./GetDetails')
@@ -42,7 +42,7 @@ app.get('/anime/:id', (req, res, next) => {
     .then(data => {
         res.status(200).send(data);
     })
-    //.catch(res.status(404).send(`Error! Anime with ID ${id} doesn\'t exist. 😓`))
+    .catch(next)
 })
 
 const getSeasonal = require('./GetSeasonal')
@@ -56,6 +56,33 @@ const getRanking = require('./GetRanking');
 app.get('/ranking', (req, res) => {
     let data = getRanking.GetRanking()
     res.send(data)
+})
+
+// error handling
+app.get('/error', (req, res) => {
+    res.send("Error!")
+})
+
+app.use((error, req, res, next) => {
+    console.error('Error: ', error)
+   
+    if (error.type == 'redirect')
+        res.redirect('/error')
+
+    else if (error.type == 'time-out') // arbitrary condition check
+        res.status(408).send(error)
+
+    else if (req.path.includes("/anime/")) {
+        // get anime id
+        var path = req.path;
+        path = path.split('/');
+        let id = path[2];
+        res.status(404).send(`Error! Anime with ID \'${id}\' doesn\'t exist. 😓`);
+    }
+    
+    else 
+        res.status(500).send(error)
+        
 })
 
 app.listen(PORT, () => {

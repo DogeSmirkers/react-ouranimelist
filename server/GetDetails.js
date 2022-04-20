@@ -11,7 +11,6 @@ module.exports = {
         //@params: id, fields
         const main = anime.anime(id, fields)
         return main
-        .catch(console.log)
         // .then(result => {
 
         //     // set each data field to var if it exists
