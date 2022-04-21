@@ -2,8 +2,6 @@ const {client_id} = require('./config');
 const API = require('./myanimelist-api-v2')
 const anime = new API.API_ANIME(client_id);
 const structures = require("./myanimelist-api-v2/src/Mal_Api_Authorized/Mal_Api_Anime/structures.json");
-// import conversion functions
-const tools = require('./Tools')
 
 module.exports = {
     //search by title
