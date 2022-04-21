@@ -20,10 +20,9 @@ function getSeasonForNumberMonth(month) {
 
 module.exports = { 
     //return all anime from specific season
-    GetSeasonal: function (year=new Date().getFullYear(), season=getSeasonForNumberMonth(new Date().getMonth()), offset=0, limit=20, sort="anime_score", fields=structures.animeInList) {
+    GetSeasonal: function (year, season, offset=0, limit=20, sort="anime_score", fields=structures.animeInList) {
         const main = anime.animeSeasonal(year, season, offset, limit, sort, fields);
         // not printing current season, should be spring 2022 but it's doing fall 2022
-        console.log(year, season);
         return main;
 
         // commented out bc might do in data parsing in front end instead

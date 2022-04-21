@@ -4,15 +4,17 @@ module.exports = class MAL_API_UTILS_ANIME {
   /**
    * @param  {Number => 0 -> 11} month
    */
-  getSeasonForNumberMonth(month) {
-    switch (month) {
-      case month < 3:
+   getSeasonForNumberMonth(month) {
+    if (month < 3) {
         return "winter";
-      case month > 2 && month < 6:
+    }
+    else if (month > 2 && month < 6) {
         return "spring";
-      case month > 5 && month < 9:
+    }
+    else if (month > 5 && month < 9) {
         return "summer";
-      default:
+    }
+    else {
         return "fall";
     }
   }
