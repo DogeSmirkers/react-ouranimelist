@@ -8,8 +8,11 @@ const tools = require('./Tools')
 module.exports = {
     // return anime by rank
     GetRanking: function (rankingType="all", offset=0, limit=20, fields=structures.animeFull){
-        const main = anime.animeRanking(rankingType, offset, limit, fields)
-        return main
+        const main = anime.animeRanking(rankingType, offset, limit, fields);
+        return main;
+
+        // commented out setting each data field to var bc might do in front end instead
+        
         // .then(result => {
         //     console.log(result.data)
         //     let obj = result.data;

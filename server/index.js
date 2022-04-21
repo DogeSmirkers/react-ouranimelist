@@ -1,22 +1,11 @@
-// comment out aws stuff for now
-// var AWS = require("aws-sdk");
-
-// AWS.config.update({
-//   region: "us-east-1",
-//   endpoint: "http://localhost:8000"
-// });
-
 const express = require('express');
 const path = require('path');
 const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 4000;
-const {client_id} = require('./config');
-const API = require('./myanimelist-api-v2')
-const anime = new API.API_ANIME(client_id);
-const structures = require("./myanimelist-api-v2/src/Mal_Api_Authorized/Mal_Api_Anime/structures.json");
-// import conversion functions
+// conversion functions 
 const tools = require('./Tools')
+
 //app.use(express.static('../client/public'))
 
 app.get('/', (req, res) => {
@@ -69,8 +58,8 @@ app.get('/ranking', (req, res, next) => {
 app.get('/error', (req, res) => {
     res.send("Error!")
 })
-
 app.use((error, req, res, next) => {
+    console.log("Error handler triggered, path:", req.path)
     console.error('Error: ', error)
    
     if (error.type == 'redirect')

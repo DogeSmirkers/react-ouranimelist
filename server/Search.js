@@ -8,8 +8,11 @@ const tools = require('./Tools')
 module.exports = {
     //search by title
     Search: function (query, offset=0, limit=10, fields=structures.animeInList) {
-        const main = anime.animes(query, offset, limit, fields)
-        return main
+        const main = anime.animes(query, offset, limit, fields);
+        return main;
+
+        // commented out bc might do in data parsing in front end instead
+        
         // .then(result => {
 
         //     // curr for only the first result in list, otherwise look at other API calls for looping
