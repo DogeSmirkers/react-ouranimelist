@@ -20,7 +20,7 @@ app.get('/search', (req, res, next) => {
     .then(data => {
         res.status(200).send(data);
     })
-    .catch(next)
+    .catch(next);
 })
 
 const getDetails = require('./GetDetails')
@@ -31,7 +31,7 @@ app.get('/anime/:id', (req, res, next) => {
     .then(data => {
         res.status(200).send(data);
     })
-    .catch(next)
+    .catch(next);
 })
 
 const getSeasonal = require('./GetSeasonal')
@@ -41,7 +41,7 @@ app.get('/seasonal', (req, res, next) => {
     .then(data => {
         res.status(200).send(data);
     })
-    .catch(next)
+    .catch(next);
 })
 
 const getRanking = require('./GetRanking');

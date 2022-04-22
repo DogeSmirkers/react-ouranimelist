@@ -1,41 +1,61 @@
-import axios from 'axios';
-import React, { useState, useEffect} from "react";
-import '../../App.css';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import axios from 'axios'
 
-export default function SearchAnime(){
-    const [animeTitle,setSearch] = useState('');
-    const [record,setRecord] = useState([]);
-
-    const searchAnime = () => {
-        console.log(animeTitle)
-        console.log("hi")
-        axios.get(`http://localhost:4000/search?${animeTitle}`)
-        .then(response => {
-            setRecord(response.data);
-        });
+export default class CreateUser extends Component {
+    constructor(props) {
+      super(props)
+      // Setting up functions
+      this.onChangeUserEmail = this.onChangeUserEmail.bind(this);
+      this.onChangeUserPassword = this.onChangeUserPassword.bind(this);
+      this.onSubmit = this.onSubmit.bind(this);
+      // Setting up state
+      this.state = {
+        email: '',
+        password: ''
+      }
     }
-
-    return (
-        <>
-        <input type="text" id="form1" onKeyUp={searchAnime} onChange={(e)=>setSearch(e.target.value)} class="form-control" placeholder="Search"/>
-        <input type="submit" formaction="/search" name="" value="Go"/>
+    onChangeUserEmail(e) {
+      this.setState({ email: e.target.value })
+    }
+    onChangeUserPassword(e) {
+      this.setState({ password: e.target.value })
+    }
+    onSubmit(e) {
+      e.preventDefault()
+      const userObject = {
+        email: this.state.email,
+        password: this.state.password
+      };
+      axios.post('http://localhost:4000/sign-up', userObject)
+        .then(res => console.log(res.data));
+      this.setState({ email: '', password: '' })
+    }
+    render() {
+      return (
           <Container>
-            <h1 style={{ textAlign: 'center' }}>Search Results</h1>
-            <div className='search'>
-              <Row>
-                <Col lg={3}>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card" width={ '100%' }/></Link>
-                </Col>
-                <Col lg={9}>
-                  <h4> title </h4>
-                  <p>synopsis</p>
-                  <p>Episode count - num_ep</p> 
-                </Col>
-              </Row>
-            </div>
+            <Form>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" value={this.state.email} onChange={this.onChangeUserEmail}/>
+                <Form.Text className="text-muted">
+                  We'll never share your email with anyone else.
+                </Form.Text>
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Password" value={this.state.password} onChange={this.onChangeUserPassword}/>
+              </Form.Group>
+              <Button variant="primary" type="submit">
+                Create User
+              </Button>
+            </Form>
+
           </Container>
-        </>
       );
+  }
 }
