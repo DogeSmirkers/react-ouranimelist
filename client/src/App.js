@@ -59,7 +59,7 @@ function App() {
 
         {/* Footer */}
         <div className='footer'>
-          <h8>Designed and Managed by <a className='dogesmirk' href="https://github.com/DogeSmirkers" target="_blank"><i>Team DogeSmirk</i></a> <img src={require('./components/images/dogesmirk.jpg')} alt="" height="16px" width="auto" onClick={start}/></h8>
+          <h8>Designed and Managed by <a className='dogesmirk' href="https://github.com/DogeSmirkers" target="_blank" rel="noreferrer"><i>Team DogeSmirk</i></a> <img src={require('./components/images/dogesmirk.jpg')} alt="" height="16px" width="auto" onClick={start}/></h8>
         </div>
     </div>
     </>
