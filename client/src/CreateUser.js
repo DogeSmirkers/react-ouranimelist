@@ -30,7 +30,7 @@ export default class CreateUser extends Component {
         email: this.state.email,
         password: this.state.password
       };
-      axios.post('http://localhost:3000/user/sign-up', userObject)
+      axios.post('http://localhost:4000/sign-up', userObject)
         .then(res => console.log(res.data));
       this.setState({ email: '', password: '' })
     }

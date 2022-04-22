@@ -15,6 +15,7 @@ module.exports = {
     },
 
     // obj --> string of what was in obj
+    // only for genres and studios, NOT pictures
     // ex: genresObj --> list of genres
     convertObj: function (obj) {
         let list = "";
@@ -31,5 +32,22 @@ module.exports = {
         }
         list = list.trim();
         return list;
+    },
+
+    // set JSON response data to variable, if it exists
+    setData: function (data) {
+        if (typeof data !== "undefined"){
+            let val = data;
+            return val;
+        }
+    },
+
+    // convert/transform variable to be human readable
+    convertIfExists: function (data) {
+        const tools = require('./Tools');
+        if (typeof data !== "undefined"){
+            if (typeof data === 'object' && data !== null) {return tools.convertObj(data)}
+            else if (typeof data === 'string') {return tools.convertDate(data)}
+        }
     }
 }
