@@ -4,6 +4,11 @@ import '../../App.css';
 import Marquee from 'react-fast-marquee';
 
 export default function AboutUs() {
+  let audio = new Audio("/bark.mp3")
+
+  const start = () => {
+    audio.play()
+  }
   return (
     <>
       <div className='bgColor'>
