@@ -31,6 +31,7 @@ app.get('/anime/:id', (req, res, next) => {
     getDetails.GetDetails(id)
     .then(data => {
         res.status(200).send(data);
+        console.log(data)
     })
     .catch(next);
 })
