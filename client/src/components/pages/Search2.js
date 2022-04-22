@@ -9,9 +9,7 @@ export default function SearchAnime(){
     const [record,setRecord] = useState([]);
 
     const searchAnime = () => {
-        console.log(animeTitle)
-        console.log("hi")
-        axios.get(`http://localhost:4000/search?${animeTitle}`)
+        axios.get('http://localhost:4000/search?', animeTitle)
         .then(response => {
             setRecord(response.data);
         });

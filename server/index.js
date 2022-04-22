@@ -19,6 +19,7 @@ app.get('/search', (req, res, next) => {
     search.Search(query)
     .then(data => {
         res.status(200).send(data);
+        console.log(data);
     })
     .catch(next);
 })
