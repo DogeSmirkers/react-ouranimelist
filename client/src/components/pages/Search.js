@@ -29,9 +29,9 @@ export default function SearchAnime(){
                   <Link to=""><img src={require("../images/naruto.jpg")} alt="Card" width={ '100%' }/></Link>
                 </Col>
                 <Col lg={9}>
-                  <h4> Naruto Shippuden </h4>
-                  <p>Naruto Shippuden is the second series of Naruto anime that follows the titular hero on his quest to become Hokage. Unlike the first series, Naruto is now older and has new teachers to help him through his adventure.</p>
-                  <p>Episode count - 500</p> 
+                  <h4> title </h4>
+                  <p>synopsis</p>
+                  <p>Episode count - num_ep</p> 
                 </Col>
               </Row>
             </div>
