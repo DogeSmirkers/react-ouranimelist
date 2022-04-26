@@ -13,7 +13,7 @@ export default function App() {
         type="text"
         placeholder="Search..."
         value={data.slug}
-        onChange={(e) => setData({ ...data, slug: e.target.value })}
+        onChange={(e) => setData({ ...data, slug: e.target.value.toLowerCase() })}
       />
       <br />
       {data.results.length > 0 ? <House family={data.results[0]} /> : null}

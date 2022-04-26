@@ -10,10 +10,10 @@ export default function App() {
   return (
     <main>
       <input
-        type="text"
+        type="search"
         placeholder="Search..."
         value={data.slug}
-        onChange={(e) => setData({ ...data, slug: e.target.value })}
+        onChange={(e) => setData({ ...data, slug: e.target.value.toLowerCase() })}
       />
       <br />
       {data.results.length > 0 ? <Animes anime={data.results[0]} /> : null}

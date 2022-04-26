@@ -6,7 +6,7 @@ export default function Animes({ anime }) {
   return (
     <div>
       <h1>{anime.name}</h1>
-      <Anime anime={animes.title} />
+      <Anime anime={anime.title} />
     </div>
   );
 }
