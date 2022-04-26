@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://pokeapi.co/api/v2/pokemon",
+  baseURL: "https://game-of-thrones-quotes.herokuapp.com/v1/house",
 });

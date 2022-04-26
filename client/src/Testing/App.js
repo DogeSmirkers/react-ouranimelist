@@ -11,7 +11,7 @@ export default function App() {
     <main>
       <input
         type="text"
-        placeholder="Type your favorite house"
+        placeholder="Search..."
         value={data.slug}
         onChange={(e) => setData({ ...data, slug: e.target.value })}
       />
