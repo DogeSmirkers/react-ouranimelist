@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import got from "./got";
+import got from './got'
 
 const useFetch = () => {
   const [data, setData] = useState({
