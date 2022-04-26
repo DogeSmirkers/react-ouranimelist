@@ -4,14 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import useFetch from "./UseFetch";
 import House from "./House";
-function App() {
 
-  let audio = new Audio("/bark.mp3");
-
-  const start = () => {
-    audio.play();
-  }
-
+export default function App() {
   const { data, setData } = useFetch();
   return (
     <main>
@@ -24,8 +18,5 @@ function App() {
       <br />
       {data.results.length > 0 ? <House family={data.results[0]} /> : null}
     </main>
-      
   );
 }
-
-export default App;
