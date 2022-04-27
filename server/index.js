@@ -3,10 +3,12 @@ const path = require('path');
 const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 4000;
+var cors = require('cors');
 // conversion functions 
 const tools = require('./Tools')
 
 //app.use(express.static('../client/public'))
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
