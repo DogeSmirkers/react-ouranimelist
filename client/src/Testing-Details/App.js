@@ -8,7 +8,7 @@ import Animes from "./Animes";
 export default function App() {
   const { data, setData } = useFetch();
   return (
-    <main>
+    <div>
       <input
         type="search"
         placeholder="Search..."
@@ -16,7 +16,7 @@ export default function App() {
         onChange={(e) => setData({ ...data, slug: e.target.value.toLowerCase() })}
       />
       <br />
-      {data.results.length > 0 ? <Animes anime={data.results[0]} /> : null}
-    </main>
+      {data.results.length > 0 ? <Animes anime={data.results} /> : null}
+    </div>
   );
 }
