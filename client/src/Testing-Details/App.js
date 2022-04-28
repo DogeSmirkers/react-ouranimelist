@@ -16,7 +16,7 @@ export default function App() {
         onChange={(e) => setData({ ...data, slug: e.target.value.toLowerCase() })}
       />
       <br />
-      {data.results.length > 0 ? <Animes anime={data.results} /> : null}
+      {Object.keys(data.results).length > 0 ? <Animes anime={data.results} /> : null}
     </div>
   );
 }

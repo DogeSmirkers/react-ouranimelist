@@ -1,15 +1,15 @@
 import React from "react";
+import Anime from "./Anime";
 
 export default function Animes({ anime }) {
   return (
     <div>
       <ul>
-        <li>{anime.title}</li>
-        <li>{anime.id}</li>
-        <li>{anime.main_picture}</li>
-        <li>{anime.main_picture.medium}</li>
-        <li>{anime.genres}</li>
-        <li>{anime.pictures}</li>
+        <li>title: {anime.title}</li>
+        <li>id: {anime.id}</li>
+        <img src={'large' in anime.main_picture ? anime.main_picture.large: anime.main_picture.medium} alt={anime.title}></img>
+        <li>{anime.genres[2].name}</li>
+        <Anime anime={anime}/>
       </ul> 
     </div>
   );
