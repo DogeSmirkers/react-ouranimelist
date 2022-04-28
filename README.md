@@ -30,4 +30,4 @@
 4. run the project `npm start`
 
 ## Additional Notes
-A `.env` file that contains the `CLIENT_ID` must be created in `server\`. 
+A `.env` file that contains the `CLIENT_ID` must be created in `server/`. 
