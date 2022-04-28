@@ -7,15 +7,19 @@ import Animes from "./Animes";
 
 export default function App() {
   const { data, setData } = useFetch();
+  const { search } = window.location;
   return (
     <div>
-      <input
-        type="search"
-        placeholder="Search..."
-        value={data.slug}
-        onChange={(e) => setData({ ...data, slug: e.target.value.toLowerCase() })}
-      />
-      <br />
+      <form >
+        <input
+          type="search"
+          placeholder="Search..."
+          value={data.slug}
+          onChange={(e) => setData({ ...data, slug: e.target.value.toLowerCase() })}
+        />
+        {/* <button type="submit" onClick={}> Search </button> */}
+      </form>
+        <br />
       {Object.keys(data.results).length > 0 ? <Animes anime={data.results} /> : null}
     </div>
   );
