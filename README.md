@@ -1,7 +1,7 @@
 # OurAnimeList
 (senior design project: fall 2021 - spring 2022)
 
-**OurAnimeList is a web application for discovering, tracking, reviewing, and discussing anime.**
+**OurAnimeList is a web application for discovering and tracking anime.**
 
 *This project is heavily inspired by:* [MyAnimeList](https://myanimelist.net/)
 
@@ -30,4 +30,4 @@
 4. run the project `npm start`
 
 ## Additional Notes
-A `.env` file that contains the `CLIENT_ID` must be created in `server/`. 
+A `.env` file that contains the `CLIENT_ID` must be created in `server/`. You can obtain your own Client ID, which is basically an API token, by creating a MyAnimeList account and requesting access to the API. It's in Account Settings > API. https://myanimelist.net/apiconfig 
