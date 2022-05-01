@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/Navbar';
+import Navi from './components/Navi';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import TopAnime from './components/pages/TopAnime';
 import RandomAnime from './components/pages/RandomAnime';
@@ -28,7 +28,7 @@ function App() {
       <div className='body'>
         <Router>
           {/* Navigation Bar */}
-          <Navbar />
+          <Navi />
 
           {/* Banner Image with Logo */}
           <div className='bar'>
