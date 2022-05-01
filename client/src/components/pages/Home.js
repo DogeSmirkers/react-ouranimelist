@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom';
 import Seasonal from './Seasonal'
+import TopAnimeAllTime from './TopAnimeAllTime';
 
 export default function Home() {
   return (
@@ -69,34 +70,8 @@ export default function Home() {
 
         <Seasonal />
 
-        {/* Top Anime of All Time */}
-        <div className='suggestion-box'>
-          <Row style={{ marginTop: 30 }}>
-            <h4>Top Anime of All Time</h4>
-            <Stack direction="horizontal" gap={3}>
-            <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
-                  Naruto
-                </div>
-                <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
-                  Naruto
-                </div>
-                <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
-                  Naruto
-                </div>
-                <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
-                  Naruto
-                </div>
-                <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
-                  Naruto
-                </div>
-            </Stack>
-          </Row>
-        </div>
+        <TopAnimeAllTime />
+        
       </Container>
     </>
   );
