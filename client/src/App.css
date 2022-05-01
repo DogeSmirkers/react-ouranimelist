@@ -34,14 +34,22 @@
   color: #000000;
 }
 .suggestion-box {
+  /* background-color: #fbcfcd;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px; */
+  overflow: auto;
+}
+.suggestion-box-pls-stop-moving {
   background-color: #fbcfcd;
   padding: 20px;
   border-radius: 15px;
   margin-top: 20px;
-  overflow: auto;
 }
 .suggestion-card {
-  flex: 1 0 21%;
+  /* flex: 1 0 21%; */
+  height: 400px;
+  width: 250px;
   text-align: center;
 }
 .suggestion-card:hover {

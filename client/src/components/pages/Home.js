@@ -50,7 +50,7 @@ export default function Home() {
         </Row>
 
         {/* Personal Suggestions */}
-        <div className='suggestion-box'>
+        <div className='suggestion-box-pls-stop-moving'>
           <Row style={{ marginTop: 5 }}>
             <h3>Your Personal Anime Suggestions</h3>
           </Row>
