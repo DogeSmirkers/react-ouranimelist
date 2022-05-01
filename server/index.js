@@ -3,10 +3,12 @@ const path = require('path');
 const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 4000;
+var cors = require('cors');
 // conversion functions 
 const tools = require('./Tools')
 
 //app.use(express.static('../client/public'))
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
@@ -14,13 +16,23 @@ app.get('/', (req, res) => {
 
 const search = require('./Search')
 // search by title
-app.get('/search', (req, res, next) => {
-    const query = req.query
+// app.get('/search', (req, res, next) => {
+//     const query = req.query
+//     search.Search(query)
+//     .then(data => {
+//         res.status(200).send(data);
+//         console.log(data);
+//     })
+//     .catch(next);
+// })
+app.get('/search/:query', (req, res, next) => {
+    const query = req.params.query
     search.Search(query)
     .then(data => {
         res.status(200).send(data);
+        console.log(data);
     })
-    .catch(next)
+    .catch(next);
 })
 
 const getDetails = require('./GetDetails')
@@ -30,8 +42,9 @@ app.get('/anime/:id', (req, res, next) => {
     getDetails.GetDetails(id)
     .then(data => {
         res.status(200).send(data);
+        console.log(data)
     })
-    .catch(next)
+    .catch(next);
 })
 
 const getSeasonal = require('./GetSeasonal')
@@ -41,7 +54,7 @@ app.get('/seasonal', (req, res, next) => {
     .then(data => {
         res.status(200).send(data);
     })
-    .catch(next)
+    .catch(next);
 })
 
 const getRanking = require('./GetRanking');

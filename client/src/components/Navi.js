@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // import { Button } from './Button';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import './Navi.css';
 // import Dropdown from './Dropdown';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
@@ -10,7 +10,7 @@ import { Modal } from './Modal';
 import { GlobalStyle } from './../globalStyles';
 import { Button, NavDropdown} from 'react-bootstrap';
 
-function Navbar() {
+function Navi() {
   const [click, setClick] = useState(false);
   // const [dropdown, setDropdown] = useState(false);
 
@@ -168,4 +168,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navi;

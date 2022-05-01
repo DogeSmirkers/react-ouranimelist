@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/Navbar';
+import Navi from './components/Navi';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import TopAnime from './components/pages/TopAnime';
 import RandomAnime from './components/pages/RandomAnime';
@@ -13,7 +13,7 @@ import Profile from './components/pages/Profile';
 import Settings from './components/pages/Settings';
 import MostPopular from './components/pages/MostPopular';
 import Ranking from './components/pages/Ranking';
-import Search from './components/pages/Search';
+// import Search from './components/pages/Search';
 
 function App() {
 
@@ -28,7 +28,7 @@ function App() {
       <div className='body'>
         <Router>
           {/* Navigation Bar */}
-          <Navbar />
+          <Navi />
 
           {/* Banner Image with Logo */}
           <div className='bar'>
@@ -44,7 +44,7 @@ function App() {
           {/* Displays content on page */}
           <Switch>
             <Route path='/' exact component={Home} />
-            <Route path='/search' component={Search} />
+            {/* <Route path='/search' component={Search} /> */}
             <Route path='/about-us' component={AboutUs} />
             <Route path='/random-anime' component={RandomAnime} />
             <Route path='/ranking' component={Ranking} />

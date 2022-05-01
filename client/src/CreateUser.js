@@ -60,5 +60,3 @@ export default class CreateUser extends Component {
       );
   }
 }
-
-// export default CreateUser;

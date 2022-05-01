@@ -2,10 +2,10 @@ import React from 'react';
 import '../../App.css';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import Stack from 'react-bootstrap/Stack';
 import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
-import { Link } from 'react-router-dom';
+import Seasonal from './Seasonal'
+import TopAnimeAllTime from './TopAnimeAllTime';
 
 export default function Home() {
   return (
@@ -50,7 +50,7 @@ export default function Home() {
         </Row>
 
         {/* Personal Suggestions */}
-        <div className='suggestion-box'>
+        <div className='suggestion-box-pls-stop-moving'>
           <Row style={{ marginTop: 5 }}>
             <h3>Your Personal Anime Suggestions</h3>
           </Row>
@@ -66,63 +66,10 @@ export default function Home() {
           </Row>
         </div>
 
-        {/* Seasonal Anime */}
-        <div className='suggestion-box'>
-          <Row style={{ marginTop: 30 }}>
-            <h4>Seasonal Anime</h4>
-            <Stack direction="horizontal" gap={3}>
-                <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
-                  Naruto
-                </div>
-                <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
-                  Naruto
-                </div>
-                <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
-                  Naruto
-                </div>
-                <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
-                  Naruto
-                </div>
-                <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
-                  Naruto
-                </div>
-            </Stack>
-          </Row>
-        </div>
+        <Seasonal/>
 
-        {/* Top Anime of All Time */}
-        <div className='suggestion-box'>
-          <Row style={{ marginTop: 30 }}>
-            <h4>Top Anime of All Time</h4>
-            <Stack direction="horizontal" gap={3}>
-            <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
-                  Naruto
-                </div>
-                <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
-                  Naruto
-                </div>
-                <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
-                  Naruto
-                </div>
-                <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
-                  Naruto
-                </div>
-                <div className='suggestion-card'>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card"/></Link>
-                  Naruto
-                </div>
-            </Stack>
-          </Row>
-        </div>
+        <TopAnimeAllTime />
+        
       </Container>
     </>
   );
