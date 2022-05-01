@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import useFetch from "./UseFetch";
-import Animes from "./Animes";
+import useFetch from "../UseFetch";
+import Animes from "../Animes";
 
 export default function App() {
   const { data, setData } = useFetch();
-  const { search } = window.location;
+  // const { search } = window.location;
   return (
     <div>
       <form >
