@@ -19,7 +19,7 @@ export default function App() {
         />
         {/* <button type="submit" onClick={}> Search </button> */}
       </form>
-        <br />
+      <br />
       {Object.keys(data.results).length > 0 ? <Animes anime={data.results} /> : null}
     </div>
   );

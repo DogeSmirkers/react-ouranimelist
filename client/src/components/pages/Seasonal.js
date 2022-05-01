@@ -4,8 +4,12 @@ import Row from 'react-bootstrap/Row';
 import Stack from 'react-bootstrap/Stack';
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
+import GetSeasonal from "../GetSeasonal";
+import Animes from "../Animes";
 
-export default function Seasonal() {
+export default function App() {
+  const { data, setData } = GetSeasonal();
+
   return (
     <>
       <Container>
@@ -35,6 +39,12 @@ export default function Seasonal() {
                 </div>
             </Stack>
           </Row>
+        </div>
+        
+        <div>
+          {(e) => setData({ ...data, slug: e.target.value.toLowerCase() })}
+          <br />
+          {Object.keys(data.results).length > 0 ? <Animes anime={data.results} /> : null}
         </div>
       </Container>
     </>

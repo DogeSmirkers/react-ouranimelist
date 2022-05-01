@@ -66,7 +66,7 @@ export default function Home() {
           </Row>
         </div>
 
-        <Seasonal />
+        <Seasonal/>
 
         <TopAnimeAllTime />
         
