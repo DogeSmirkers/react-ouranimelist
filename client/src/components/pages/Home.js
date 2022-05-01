@@ -2,10 +2,8 @@ import React from 'react';
 import '../../App.css';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import Stack from 'react-bootstrap/Stack';
 import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
-import { Link } from 'react-router-dom';
 import Seasonal from './Seasonal'
 import TopAnimeAllTime from './TopAnimeAllTime';
 
