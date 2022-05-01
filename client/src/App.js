@@ -13,7 +13,7 @@ import Profile from './components/pages/Profile';
 import Settings from './components/pages/Settings';
 import MostPopular from './components/pages/MostPopular';
 import Ranking from './components/pages/Ranking';
-import Search from './components/pages/Search';
+// import Search from './components/pages/Search';
 
 function App() {
 
@@ -44,7 +44,7 @@ function App() {
           {/* Displays content on page */}
           <Switch>
             <Route path='/' exact component={Home} />
-            <Route path='/search' component={Search} />
+            {/* <Route path='/search' component={Search} /> */}
             <Route path='/about-us' component={AboutUs} />
             <Route path='/random-anime' component={RandomAnime} />
             <Route path='/ranking' component={Ranking} />
