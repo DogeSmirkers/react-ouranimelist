@@ -118,12 +118,13 @@
   position: relative;
   background-color: transparent;
   border-color: transparent;
-}
-.dropdown-toggle::after {
-  content: none;
+  padding-top: 30px;
 }
 .dropdown-menu:hover {
   background-position-y: 20px;
+}
+.dropdown-toggle::after {
+  content: none;
 }
 
 @media screen and (max-width: 960px) {

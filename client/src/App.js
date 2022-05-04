@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navi from './components/Navi';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import TopAnime from './components/pages/TopAnime';
+import TopUpcoming from './components/pages/TopUpcoming';
 import RandomAnime from './components/pages/RandomAnime';
 import AboutUs from './components/pages/AboutUs';
 import ContactUs from './components/pages/ContactUs';
@@ -13,6 +13,7 @@ import Profile from './components/pages/Profile';
 import Settings from './components/pages/Settings';
 import MostPopular from './components/pages/MostPopular';
 import Ranking from './components/pages/Ranking';
+import AnimeDetails from './components/pages/AnimeDetails';
 // import Search from './components/pages/Search';
 
 function App() {
@@ -49,11 +50,12 @@ function App() {
             <Route path='/random-anime' component={RandomAnime} />
             <Route path='/ranking' component={Ranking} />
             <Route path='/most-popular' component={MostPopular} />
-            <Route path='/topanime' component={TopAnime} />
+            <Route path='/top-upcoming' component={TopUpcoming} />
             <Route path='/profile' exact component={Profile} />
             <Route path='/contact-us' component={ContactUs} />
             <Route path='/sign-up' exact component={SignUp} />
             <Route path='/settings' component={Settings} />
+            <Route path='/anime/:id' component={AnimeDetails} />
           </Switch>
         </Router>
 

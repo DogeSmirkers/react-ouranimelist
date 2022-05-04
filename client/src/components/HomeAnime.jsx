@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import AnimeDetails from "./pages/AnimeDetails";
 
 export default function HomeAnimes({ animes }) {
     
@@ -15,10 +17,21 @@ export default function HomeAnimes({ animes }) {
     return (
         <>
             {animeList.map((animeList) => (
-                <div className='suggestion-card' key={animeList.id}>
-                    <a href={"https://myanimelist.net/anime/"+animeList.id}  target="_blank" ><img src={animeList.main_picture.medium} alt={animeList.title}/></a>
-                    {animeList.title}
-                </div>
+                <>
+                    <div>
+                        <div className='suggestion-card' key={animeList.id}>
+                            <Link to={`anime/${animeList.id}`}><img src={animeList.main_picture.large} alt={animeList.title} height='300px' width='200px'/> </Link>
+                            {/* <Router>
+                                <Switch>
+                                    <Route path={{'/anime/':animeList.id}} component={AnimeDetail} />
+                                </Switch>
+                            </Router> */}
+                        </div>
+                        <div style={{ marginBottom: '30px', textAlign: 'center' }}> 
+                            {animeList.title}
+                        </div>
+                    </div>
+                </>
             ))}
         </>
   );
