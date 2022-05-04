@@ -8,7 +8,7 @@ export default function Ranking() {
     <>
         <Container>
           <h1 style={{ textAlign: 'center' }}> Ranking </h1>
-            <div className='random-anime'>
+            <div className='anime-details'>
               <Row>
                 <h3> Number 1 </h3>
                 <Col lg={2}>

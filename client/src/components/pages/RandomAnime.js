@@ -8,7 +8,7 @@ export default function RandomAnime() {
     <>
       <Container>
         <h1 style={{ textAlign: 'center' }}>Random Anime</h1>
-        <div className='random-anime'>
+        <div className='anime-details'>
           <Row>
             <Col lg={3}>
               <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image" width={ '100%' }/></Link>

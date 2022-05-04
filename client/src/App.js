@@ -55,7 +55,7 @@ function App() {
             <Route path='/contact-us' component={ContactUs} />
             <Route path='/sign-up' exact component={SignUp} />
             <Route path='/settings' component={Settings} />
-            <Route path='/anime/:id' component={AnimeDetails} />
+            <Route path='/anime/:title' component={AnimeDetails} />
           </Switch>
         </Router>
 
