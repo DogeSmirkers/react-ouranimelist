@@ -19,7 +19,7 @@ export default function Profile() {
               <p> "Anime was a mistake" </p>
             </Col>
             <Col lg={3}>
-              <Button variant="outline-custom">Edit Profile</Button>
+              <Link to='/Settings'><Button variant="outline-custom">Edit Profile</Button></Link>
               <br/><br/>
               <Button variant="outline-custom">Add Anime</Button>
             </Col>

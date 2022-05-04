@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
-// import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navi.css';
-// import Dropdown from './Dropdown';
 import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import styled from 'styled-components';
 import { Modal } from './Modal';
 import { GlobalStyle } from './../globalStyles';
 import { Button, NavDropdown} from 'react-bootstrap';
@@ -77,90 +73,68 @@ function Navi() {
         </li>
 
         {/* Ranking Page Link */}
-        <li className='nav-item'
-          // onMouseEnter={onMouseEnter}
-          // onMouseLeave={onMouseLeave}
-        >
+        <li className='nav-item'>
           <Link
             to='/ranking'
             className='nav-links'
             onClick={closeMobileMenu}
           >
-          <NavDropdown title="Ranking" renderMenuOnMount={true}>
-            <Dropdown.Toggle id="dropdown-autoclose-true">
-            {/* Ranking */}
-            </Dropdown.Toggle>
-              {/* Top Anime of All Time Page Link */}
-              <NavDropdown.Item>
-                <Link
-                  to='/top-anime-of-all-time'
-                  className='nav-links'
-                  onClick={closeMobileMenu}
-                >
-                  Top Anime of All Time
-                </Link>
-              </NavDropdown.Item>
-
-              {/* Most Popular Page Link */}
-              <NavDropdown.Item>
-                <Link
-                    to='/most-popular'
+            <NavDropdown title="Ranking" renderMenuOnMount={true} style={{ display: 'inline-flex' }}>
+              <Dropdown.Toggle id="dropdown-autoclose-true">
+              {/* Ranking */}
+              </Dropdown.Toggle>
+                {/* Top Upcoming Anime Page Link */}
+                <NavDropdown.Item>
+                  <Link
+                    to='/top-upcoming'
                     className='nav-links'
                     onClick={closeMobileMenu}
-                >
-                  Most Popular
-                </Link>
-              </NavDropdown.Item>
-          </NavDropdown>
+                  >
+                    Top Upcoming
+                  </Link>
+                </NavDropdown.Item>
 
+                {/* Most Popular Page Link */}
+                <NavDropdown.Item>
+                  <Link
+                      to='/most-popular'
+                      className='nav-links'
+                      onClick={closeMobileMenu}
+                  >
+                    Most Popular
+                  </Link>
+                </NavDropdown.Item>
+            </NavDropdown>
           </Link>
-            {/* {dropdown && <Dropdown />} */}
           </li>
-          <li className='nav-item'        >
+          <li className='nav-item'>
           <Link
             to='/profile'
             className='nav-links'
             onClick={closeMobileMenu}
           >
-          <NavDropdown title="Profile" renderMenuOnMount={true}>
-            <Dropdown.Toggle id="dropdown-autoclose-true">
-            {/* Profile */}
-            </Dropdown.Toggle>
-              {/* Settings Page Link */}
-              <NavDropdown.Item>
-                <Link
-                  to='/Settings'
-                  className='nav-links'
-                  onClick={closeMobileMenu}
-                >
-                  Settings
-                </Link>
-              </NavDropdown.Item>
-          </NavDropdown>
-
+            <NavDropdown title="Profile" renderMenuOnMount={true} style={{ display: 'inline-flex' }}  >
+              <Dropdown.Toggle id="dropdown-autoclose-true">
+              {/* Profile */}
+              </Dropdown.Toggle>
+                {/* Settings Page Link */}
+                <NavDropdown.Item>
+                  <Link
+                    to='/Settings'
+                    className='nav-links'
+                    onClick={closeMobileMenu}
+                  >
+                    Settings
+                  </Link>
+                </NavDropdown.Item>
+            </NavDropdown>
           </Link>
           </li>
-          {/* <li className='nav-item'>
-            <Link
-              to='/sign-up'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Login
-            </Link>
-          </li> */}
+          {/* Login Modal */}
           <li className='nav-item'>
-          {/* <Link to='/sign-up' className='nav-links' onClick={closeMobileMenu}>
-            Login
-          </Link> */}
-          {/* <Link className='nav-links' onClick={() =>{closeMobileMenu(); showModal();}}>
-            Login
+            <Button onClick={openModal}>Login</Button>
             <Modal showModal={showModal} setShowModal={setShowModal} />
-        <GlobalStyle />
-          </Link> */}
-          <Button onClick={openModal}>Login</Button>
-        <Modal showModal={showModal} setShowModal={setShowModal} />
-        <GlobalStyle />
+            <GlobalStyle />
           </li>
         </ul>
       </nav>

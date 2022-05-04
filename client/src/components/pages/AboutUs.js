@@ -78,19 +78,19 @@ export default function AboutUs() {
       </Row>
       <Row>
         <Col>
-          <img className='teamImg' src={require('../images/leon_smirk.jpg')} alt="cat with drawn eyebrow" height='200px' />
+          <img className='teamImg' src={require('../images/leon_smirk.jpg')} alt="cat with drawn eyebrow" height='200px' onClick={start}/>
           <h4 className='centerText'><a className='teamLink' href='https://github.com/yelu2021' target="_blank" rel="noreferrer">Leon</a></h4>
         </Col>
         <Col>
-          <img className='teamImg' src={require('../images/hawyeepika.png')} alt="sad pixel pikachu with cowboy hat" height='200px' />
+          <img className='teamImg' src={require('../images/hawyeepika.png')} alt="sad pixel pikachu with cowboy hat" height='200px' onClick={start}/>
           <h4 className='centerText'><a className='teamLink' href='https://github.com/LuongMonica' target="_blank" rel="noreferrer">Monica</a></h4>
         </Col>
         <Col>
-          <img className='teamImg' src={require('../images/kimuwu1.png')} alt="isabelle from animal crossing with suprised face and exclamation point" height='200px' />
+          <img className='teamImg' src={require('../images/kimuwu1.png')} alt="isabelle from animal crossing with suprised face and exclamation point" height='200px' onClick={start}/>
           <h4 className='centerText'><a className='teamLink' href='https://github.com/kimrenie' target="_blank" rel="noreferrer">Kim</a></h4>
         </Col>
         <Col>
-          <img className='teamImg' src={require('../images/sleepy_rai.jpg')} alt="undertale dog lying down" height='200px' />
+          <img className='teamImg' src={require('../images/sleepy_rai.jpg')} alt="undertale dog lying down" height='200px' onClick={start}/>
           <h4 className='centerText'><a className='teamLink' href='https://github.com/ShibuyaNobody' target="_blank" rel="noreferrer">Rai</a></h4>
         </Col>
       </Row>

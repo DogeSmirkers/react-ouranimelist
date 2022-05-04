@@ -2,11 +2,11 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-export default function TopAnime() {
+export default function TopUpcoming() {
   return (
     <>
       <Container>
-          <h1 style={{ textAlign: 'center' }}>Top Anime</h1>
+          <h1 style={{ textAlign: 'center' }}>Top Upcoming</h1>
           <div className='random-anime'>
             <Row>
               <Col lg={3}>
