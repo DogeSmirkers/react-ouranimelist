@@ -18,7 +18,7 @@
   margin: 0px auto;
 }
 .personalSuggestion {
-  background-image: url('./components/images/oddtaxi.jpg');
+  /* background-image: url('./components/images/oddtaxi.jpg'); */
   padding: 160px;
   background-size: cover;
   background-position: center;
@@ -228,7 +228,7 @@
 .teamLink:hover {
   color: #cc6666;
 }
-.random-anime {
+.anime-details {
   background-color: #fbcfcd;
   padding: 20px;
   border-radius: 15px;
@@ -291,3 +291,9 @@
   background: #e57777;
   border-radius: 40px;
 }
+/* #mal-pic {
+  text-decoration: none;
+}
+#mal-pic:hover {
+  text-decoration: underline;
+} */

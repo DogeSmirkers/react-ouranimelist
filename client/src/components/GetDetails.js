@@ -2,18 +2,17 @@ import { useState, useEffect } from "react";
 
 import api from "./api";
 
-const GetDetails = () => {
+const GetDetails = (id) => {
   const [data, setData] = useState({
-    slug: "",
-    results: [],
+    results: []
   });
 
   useEffect(() => {
-    if (data.slug !== "") {
+    if (id !== "") {
       const timeoutId = setTimeout(() => {
         const fetch = async () => {
           try {
-            const res = await api.get(`/${data.slug}`);
+            const res = await api.get(`/${id}`);
             setData({ ...data, results: res.data });
           } catch (err) {
             console.error(err);

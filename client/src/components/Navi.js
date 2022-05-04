@@ -93,7 +93,7 @@ function Navi() {
               {/* Top Anime of All Time Page Link */}
               <NavDropdown.Item>
                 <Link
-                  to='/topanime'
+                  to='/top-anime-of-all-time'
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
