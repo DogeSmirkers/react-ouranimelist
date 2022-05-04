@@ -14,7 +14,7 @@ export default function PersonalSuggestion() {
   return (
     <>
       <p onLoad={(e) => setData({ ...data})}> </p>
-      <div className='suggestion-box-pls-stop-moving'>
+      <Container fluid className='suggestion-box-pls-stop-moving'>
           <Row style={{ marginTop: 5 }}>
           <h3>Your Personal Anime Suggestions</h3>
           </Row>
@@ -29,7 +29,7 @@ export default function PersonalSuggestion() {
                 {Object.keys(data.results).length > 0 ? <p><b>Episodes:</b> {data.results.num_episodes}</p> : null}
             </Col>
           </Row>
-      </div>
+      </Container>
     </>
   )
 }
