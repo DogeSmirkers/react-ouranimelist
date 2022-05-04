@@ -13,6 +13,7 @@ import Profile from './components/pages/Profile';
 import Settings from './components/pages/Settings';
 import MostPopular from './components/pages/MostPopular';
 import Ranking from './components/pages/Ranking';
+import AnimeDetails from './components/pages/AnimeDetails';
 // import Search from './components/pages/Search';
 
 function App() {
@@ -49,11 +50,12 @@ function App() {
             <Route path='/random-anime' component={RandomAnime} />
             <Route path='/ranking' component={Ranking} />
             <Route path='/most-popular' component={MostPopular} />
-            <Route path='/topanime' component={TopAnime} />
+            <Route path='/top-anime' component={TopAnime} />
             <Route path='/profile' exact component={Profile} />
             <Route path='/contact-us' component={ContactUs} />
             <Route path='/sign-up' exact component={SignUp} />
             <Route path='/settings' component={Settings} />
+            <Route path='/anime/:id' component={AnimeDetails} />
           </Switch>
         </Router>
 
