@@ -15,10 +15,16 @@ export default function HomeAnimes({ animes }) {
     return (
         <>
             {animeList.map((animeList) => (
-                <div className='suggestion-card' key={animeList.id}>
-                    <a href={"https://myanimelist.net/anime/"+animeList.id}  target="_blank" ><img src={animeList.main_picture.medium} alt={animeList.title}/></a>
-                    {animeList.title}
-                </div>
+                <>
+                    <div>
+                        <div className='suggestion-card' key={animeList.id}>
+                            <a href={"https://myanimelist.net/anime/"+animeList.id}  target="_blank" ><img src={animeList.main_picture.large} alt={animeList.title} height='300px' width='auto'/></a>
+                        </div>
+                        <div style={{ marginBottom: '30px', textAlign: 'center' }}> 
+                            {animeList.title}
+                        </div>
+                    </div>
+                </>
             ))}
         </>
   );
