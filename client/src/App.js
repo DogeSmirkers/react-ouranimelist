@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navi from './components/Navi';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import TopAnime from './components/pages/TopAnime';
+import TopUpcoming from './components/pages/TopUpcoming';
 import RandomAnime from './components/pages/RandomAnime';
 import AboutUs from './components/pages/AboutUs';
 import ContactUs from './components/pages/ContactUs';
@@ -50,7 +50,7 @@ function App() {
             <Route path='/random-anime' component={RandomAnime} />
             <Route path='/ranking' component={Ranking} />
             <Route path='/most-popular' component={MostPopular} />
-            <Route path='/top-anime' component={TopAnime} />
+            <Route path='/top-upcoming' component={TopUpcoming} />
             <Route path='/profile' exact component={Profile} />
             <Route path='/contact-us' component={ContactUs} />
             <Route path='/sign-up' exact component={SignUp} />
