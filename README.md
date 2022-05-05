@@ -26,11 +26,26 @@
 # Documentation
 
 ## How To Run This Project
-1. clone the repo `git clone https://github.com/DogeSmirkers/react-ouranimelist.git`
-2. install all neccessary packages for front-end `cd /react-ouranimelist/client && npm i`
-3. install all neccessary packages for back-end `cd /react-ouranimelist/server && npm i`
-4. start the back-end first `cd /react-ouranimelist/server && npm start` or `nodemon start`
-5. start the front-end `cd /react-ouranimelist/client && npm start`
+1. clone the repo 
+```
+git clone https://github.com/DogeSmirkers/react-ouranimelist.git
+```
+2. install all neccessary packages for front-end 
+```
+cd /react-ouranimelist/client && npm i
+```
+5. install all neccessary packages for back-end 
+```
+cd /react-ouranimelist/server && npm i
+```
+7. start the back-end first 
+```
+cd /react-ouranimelist/server && nodemon start 
+```
+9. start the front-end 
+```
+cd /react-ouranimelist/client && npm start
+```
 
 ## Additional Notes
 A `.env` file that contains the `CLIENT_ID` must be created in `server/`. You can obtain your own Client ID, which is basically an API token, by creating a MyAnimeList account and requesting access to the API. It's in Account Settings > [API](https://myanimelist.net/apiconfig) 
