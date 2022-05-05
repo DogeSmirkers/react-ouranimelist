@@ -5,6 +5,7 @@ const GetRandom = () => {
     function generateRandomLetter() {
         const alphabet = "abcdefghijklmnopqrstuvwxyz"
         const vowel = "aeiou"
+        // query must be at least 3 letters
         return alphabet[Math.floor(Math.random() * alphabet.length)] + alphabet[Math.floor(Math.random() * alphabet.length)] + alphabet[Math.floor(Math.random() * alphabet.length)]
     }
     
@@ -12,7 +13,7 @@ const GetRandom = () => {
         return Math.floor(Math.random() * max);
     }
 
-    let randomNum = getRandomNum(9)
+    let randomNum = getRandomNum(2)
     let letter = generateRandomLetter()
 
     const [data, setData] = useState({
