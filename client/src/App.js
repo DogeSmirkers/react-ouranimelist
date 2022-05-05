@@ -14,6 +14,7 @@ import Settings from './components/pages/Settings';
 import MostPopular from './components/pages/MostPopular';
 import Ranking from './components/pages/Ranking';
 import AnimeDetails from './components/pages/AnimeDetails';
+import SearchBar from './components/SearchBar';
 // import Search from './components/pages/Search';
 
 function App() {
@@ -37,10 +38,11 @@ function App() {
           </div>
 
           {/* Search Bar */}
-          <form className="searchBar" action="index.html" method="GET">
+          {/* <form className="searchBar" action="index.html" method="GET">
             <input type="text" name=""placeholder="Search"/>
             <input type="submit" formaction="/search" name="" value="Go"/>
-          </form>
+          </form> */}
+          <SearchBar />
 
           {/* Displays content on page */}
           <Switch>
