@@ -4,7 +4,9 @@
 
 **OurAnimeList is a web application for discovering and tracking anime.**
 
-*This project is heavily inspired by:* [MyAnimeList](https://myanimelist.net/)
+This project is inspired by: [MyAnimeList.net](https://myanimelist.net/)
+
+(CIT480 Senior Design Project: fall 2021 - spring 2022)
 
 ## Built With
 - [NodeJS](https://github.com/nodejs/node)
@@ -22,6 +24,8 @@
 
 ## Links
 [MAL API](https://myanimelist.net/apiconfig/references/api/v2)
+
+<hr>
 
 # Documentation
 
@@ -49,7 +53,3 @@ cd /react-ouranimelist/client && npm start
 
 ## Additional Notes
 A `.env` file that contains the `CLIENT_ID` must be created in `server/`. You can obtain your own Client ID, which is basically an API token, by creating a MyAnimeList account and requesting access to the API. It's in Account Settings > [API](https://myanimelist.net/apiconfig) 
-
-<hr>
-
-(CIT480 Senior Design Project: fall 2021 - spring 2022)
