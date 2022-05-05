@@ -6,7 +6,7 @@ const GetRandom = () => {
         const alphabet = "abcdefghijklmnopqrstuvwxyz"
         const vowel = "aeiou"
         // query must be at least 3 letters
-        return alphabet[Math.floor(Math.random() * alphabet.length)] + alphabet[Math.floor(Math.random() * alphabet.length)] + alphabet[Math.floor(Math.random() * alphabet.length)]
+        return alphabet[Math.floor(Math.random() * alphabet.length)] 
     }
     
     function getRandomNum(max) {
@@ -14,7 +14,7 @@ const GetRandom = () => {
     }
 
     let randomNum = getRandomNum(2)
-    let letter = generateRandomLetter()
+    let query = generateRandomLetter() + generateRandomLetter() + generateRandomLetter()
 
     const [data, setData] = useState({
         results: [],
@@ -24,7 +24,7 @@ const GetRandom = () => {
         const timeoutId = setTimeout(() => {
             const fetch = async () => {
                 try {
-                    const res = await axios(`http://localhost:4000/search/${letter}`);
+                    const res = await axios(`http://localhost:4000/search?${query}`);
                     console.log(res.data.data[randomNum].node)
                     setData({ ...data, results: res.data.data[randomNum].node });
                 } catch (err) {

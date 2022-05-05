@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-
-import api from "./api";
+import axios from 'axios';
 
 const useFetch = () => {
   const [data, setData] = useState({
@@ -13,8 +12,8 @@ const useFetch = () => {
       const timeoutId = setTimeout(() => {
         const fetch = async () => {
           try {
-            const res = await api.get(`/${data.slug}`);
-            setData({ ...data, results: res.data });
+            const res = await axios(`http://localhost:4000/search?${data.slug}`);
+            setData({ ...data, results: res.data.data[0].node });
           } catch (err) {
             console.error(err);
           }
