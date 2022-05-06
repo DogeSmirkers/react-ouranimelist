@@ -73,7 +73,8 @@
 } */
 .searchBar {
   background-color: #fbcfcd;
-  padding-top: 30px;
+  padding: 20px;
+  text-align: center;
 }
 .searchBar input[type = "text"] {
   border: 0;
@@ -95,7 +96,7 @@
   width: 240px;
   border-color: #654321;
 }
-.searchBar input[type = "submit"] {
+/* .searchBar input[type = "submit"] {
   border: 0;
   background: none;
   display: flex;
@@ -110,6 +111,20 @@
   transition: 0.25s;
   cursor: pointer;
   transform: translate(145px, -40px); 
+} */
+.searchBar input[type = "submit"] {
+  text-align: center;
+  border: 0;
+  background: none;
+  border: 2px solid #d69191;
+  padding: 3px;
+  width: 100px;
+  outline: none;
+  color: rgb(90, 81, 81);
+  font-weight: bold;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
 }
 .searchBar input[type = "submit"]:hover {
   background: #fdab9f;
@@ -297,3 +312,35 @@
 #mal-pic:hover {
   text-decoration: underline;
 } */
+.error-text-left {
+  text-align: right;
+  font-size: 40px;
+  margin-left: 80px;
+}
+.error-text-right {
+  text-align: left;
+  font-size: 40px;
+  margin-right: 80px;
+}
+.error-text-left:hover, .error-text-right:hover {
+  font-size: 60px;
+}
+.error img {
+  height: 40px;
+  margin-top: 10px;
+  animation: spin 5s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.error img:hover {
+  animation: spin 5s linear infinite;
+  height: 50px;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

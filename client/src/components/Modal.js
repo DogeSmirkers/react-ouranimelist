@@ -2,7 +2,8 @@ import React, { useRef, useEffect, useCallback } from 'react';
 import { useSpring, animated } from 'react-spring';
 import styled from 'styled-components';
 import { MdClose } from 'react-icons/md';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { Container, Row, Form, Button } from 'react-bootstrap';
 
 const Background = styled.div`
   width: 100%;
@@ -130,7 +131,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                       </Form.Group>
                     </Form>
                     <div className='text-center'>
-                      <Button variant="custom"> Sign Up </Button>{' '}
+                      <Link to='/coming-soon'><Button variant="custom"> Sign Up </Button></Link>
                     </div>
                     <hr style={{ backgroundColor: "#00334f", height: 2, width: "100%" }}/>
                     <h4 style={{ textAlign: 'right'}}> Log In</h4>
@@ -145,7 +146,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                       </Form.Group>
                     </Form>
                     <div className='text-center'>
-                      <Button variant="custom"> Log In </Button>{' '}
+                    <Link to='/coming-soon'><Button variant="custom"> Log In </Button></Link>
                     </div>
               </ModalContent>
               <CloseModalButton

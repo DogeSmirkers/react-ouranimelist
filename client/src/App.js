@@ -16,6 +16,8 @@ import Ranking from './components/pages/Ranking';
 import AnimeDetails from './components/pages/AnimeDetails';
 import SearchBar from './components/SearchBar';
 import SearchResults from './components/pages/SearchResults';
+import ComingSoon from './components/pages/ComingSoon';
+import Error from './components/pages/Error';
 
 function App() {
 
@@ -60,6 +62,8 @@ function App() {
             <Route path='/settings' component={Settings} />
             <Route path='/anime/:title' component={AnimeDetails} />
             <Route path='/search-results/:title' component={SearchResults} />
+            <Route path='/coming-soon' component={ComingSoon} />
+            <Route path='/error' component={Error} />
           </Switch>
         </Router>
 

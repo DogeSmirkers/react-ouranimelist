@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { useState, useEffect } from "react";
 import '../App.css';
-import {Form, Button, Container} from 'react-bootstrap';
+import {Form, Button, Container, Row} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
@@ -53,10 +53,12 @@ export default class SearchBar extends Component {
   render(){
     return (
       <>
-          <form className="searchBar" method="GET">
-              <input type="text" name="" placeholder="Search" value={this.state.searchQuery} onChange={this.onChangeSearchQuery}/>
-              <input type="submit" formAction="/search" name="" value="Go"/>
-          </form>
+          <Container fluid className='searchBar'>
+            <form  method="GET">
+                {/* <input type="text" name="" placeholder="Search" value={this.state.searchQuery} onChange={this.onChangeSearchQuery}/> */}
+                <input type="submit" formAction="/search" name="" value="Search"/>
+            </form>
+          </Container>
       </>
     );
 }}
