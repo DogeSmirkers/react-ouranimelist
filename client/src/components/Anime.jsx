@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 import { Container, Row, Col } from 'react-bootstrap';
-import Tools from "../Tools";
+import Tools from '../Tools';
 
 export default function Anime({ anime }) {
   // let startDate = true;
