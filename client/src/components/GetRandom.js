@@ -19,7 +19,6 @@ const GetRandom = () => {
     const [data, setData] = useState({
         results: [],
     });
-
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             const fetch = async () => {

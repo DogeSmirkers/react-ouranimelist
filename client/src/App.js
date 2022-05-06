@@ -15,7 +15,6 @@ import MostPopular from './components/pages/MostPopular';
 import Ranking from './components/pages/Ranking';
 import AnimeDetails from './components/pages/AnimeDetails';
 import SearchBar from './components/SearchBar';
-// import Search from './components/pages/Search';
 
 function App() {
 
