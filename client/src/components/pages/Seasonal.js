@@ -1,13 +1,10 @@
 import React from 'react';
-import axios from 'axios';
 import '../../App.css';
 import Row from 'react-bootstrap/Row';
 import Stack from 'react-bootstrap/Stack';
 import Container from 'react-bootstrap/Container';
-import { Link } from 'react-router-dom';
 import GetSeasonal from "../GetSeasonal";
 import HomeAnime from "../HomeAnime";
-
 
 export default function Seasonal() {
   const { data, setData } = GetSeasonal();

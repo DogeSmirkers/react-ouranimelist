@@ -15,18 +15,9 @@ app.get('/', (req, res) => {
 })
 
 const search = require('./Search')
-// search by title
-// app.get('/search', (req, res, next) => {
-//     const query = req.query
-//     search.Search(query)
-//     .then(data => {
-//         res.status(200).send(data);
-//         console.log(data);
-//     })
-//     .catch(next);
-// })
-app.get('/search/:query', (req, res, next) => {
-    const query = req.params.query
+// search by title using query string
+app.get('/search', (req, res, next) => {
+    const query = req.query
     search.Search(query)
     .then(data => {
         res.status(200).send(data);
@@ -34,6 +25,16 @@ app.get('/search/:query', (req, res, next) => {
     })
     .catch(next);
 })
+// search by title using req params
+// app.get('/search/:query', (req, res, next) => {
+//     const query = req.params.query
+//     search.Search(query)
+//     .then(data => {
+//         res.status(200).send(data);
+//         console.log(data);
+//     })
+//     .catch(next);
+// })
 
 const getDetails = require('./GetDetails')
 // get anime details 
