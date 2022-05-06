@@ -5,9 +5,13 @@ import Marquee from 'react-fast-marquee';
 
 export default function AboutUs() {
   let audio = new Audio("/bark.mp3")
+  let pika = new Audio("/pikachu-cry.mp3")
 
   const start = () => {
     audio.play()
+  }
+  const go = () => {
+    pika.play()
   }
   return (
     <>
@@ -82,7 +86,7 @@ export default function AboutUs() {
           <h4 className='centerText'><a className='teamLink' href='https://github.com/yelu2021' target="_blank" rel="noreferrer">Leon</a></h4>
         </Col>
         <Col>
-          <img className='teamImg' src={require('../images/hawyeepika.png')} alt="sad pixel pikachu with cowboy hat" height='200px' onClick={start}/>
+          <img className='teamImg' src={require('../images/hawyeepika.png')} alt="sad pixel pikachu with cowboy hat" height='200px' onClick={go}/>
           <h4 className='centerText'><a className='teamLink' href='https://github.com/LuongMonica' target="_blank" rel="noreferrer">Monica</a></h4>
         </Col>
         <Col>
