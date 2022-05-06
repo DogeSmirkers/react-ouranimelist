@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import useFetch from "./UseFetch";
-import Animes from "./Animes";
+import Anime from "./Anime";
+import HomeAnime from "../components/HomeAnime"
 
 export default function App() {
   const { data, setData } = useFetch();
@@ -16,7 +16,8 @@ export default function App() {
         onChange={(e) => setData({ ...data, slug: e.target.value.toLowerCase() })}
       />
       <br />
-      {data.results.length > 0 ? <Animes anime={data.results[0]} /> : null}
+      {data.results.id}
+      {/* {data.results.length > 0 ? <HomeAnime animes={data.results} /> : null} */}
     </main>
   );
 }

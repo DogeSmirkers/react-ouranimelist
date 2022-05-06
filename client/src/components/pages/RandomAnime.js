@@ -1,25 +1,17 @@
 import React from 'react';
 import '../../App.css';
-import { Container, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import GetRandom from '../GetRandom';
+import Anime from "../Anime";
 
 export default function RandomAnime() {
+  const { data, setData } = GetRandom();
+
   return (
     <>
+      <p onLoad={(e) => setData({ ...data})}> </p>
       <Container>
-        <h1 style={{ textAlign: 'center' }}>Random Anime</h1>
-        <div className='anime-details'>
-          <Row>
-            <Col lg={3}>
-              <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image" width={ '100%' }/></Link>
-            </Col>
-            <Col lg={9}>
-              <h4> Naruto Shippuden </h4>
-              <p>Naruto Shippuden is the second series of Naruto anime that follows the titular hero on his quest to become Hokage. Unlike the first series, Naruto is now older and has new teachers to help him through his adventure.</p>
-              <p>Episode count - 500</p> 
-            </Col>
-          </Row>
-        </div>
+        {Object.keys(data.results).length > 0 ? <Anime anime={data.results} /> : null}
       </Container>
     </>
   );
