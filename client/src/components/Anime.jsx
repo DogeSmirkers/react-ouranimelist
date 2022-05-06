@@ -4,19 +4,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Tools from "../Tools";
 
 export default function Anime({ anime }) {
-  // let startDate = true;
-  // let endDate = true;
-  // if (typeof anime.start_date != "undefined" && typeof anime.end_date != "undefined") {
-
-  // }
-  // else if (typeof anime.start_date == "undefined" && typeof anime.end_date == "undefined") {
-  //   startDate = false;
-  //   endDate = false;
-  // }
-  // else {
-  //   endDate = false;
-  // }
-
   return (
     <> 
       <div className='anime-details'>
