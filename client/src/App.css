@@ -314,30 +314,18 @@
 } */
 .error-text-left {
   text-align: right;
-  font-size: 40px;
-  margin-left: 80px;
+  font-size: 100px;
+  margin-left: 55px;
 }
 .error-text-right {
   text-align: left;
-  font-size: 40px;
-  margin-right: 80px;
-}
-.error-text-left:hover, .error-text-right:hover {
-  font-size: 60px;
+  font-size: 100px;
+  margin-right: 55px;
 }
 .error img {
-  height: 40px;
-  margin-top: 10px;
+  height: 100px;
+  margin-top: 20px;
   animation: spin 5s linear infinite;
-}
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.error img:hover {
-  animation: spin 5s linear infinite;
-  height: 50px;
 }
 @keyframes spin {
   100% {
