@@ -15,6 +15,7 @@ import MostPopular from './components/pages/MostPopular';
 import Ranking from './components/pages/Ranking';
 import AnimeDetails from './components/pages/AnimeDetails';
 import SearchBar from './components/SearchBar';
+import SearchResults from './components/pages/SearchResults';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
   const start = () => {
     audio.play()
   }
+
 
   return (
     <>
@@ -57,6 +59,7 @@ function App() {
             <Route path='/sign-up' exact component={SignUp} />
             <Route path='/settings' component={Settings} />
             <Route path='/anime/:title' component={AnimeDetails} />
+            <Route path='/search-results/:title' component={SearchResults} />
           </Switch>
         </Router>
 
