@@ -1,15 +1,15 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
-import GetTopUpcoming from '../GetTopUpcoming';
+import GetTopAiring from '../GetTopAiring';
 import Animes from '../Animes';
 
-export default function TopUpcoming() {
-  const { data, setData } = GetTopUpcoming();
+export default function TopAiring() {
+  const { data, setData } = GetTopAiring();
   return (
     <>
       <p onLoad={(e) => setData({ ...data})}> </p>
       <Container>
-          <h1 style={{ textAlign: 'center' }}> Top Upcoming </h1>
+          <h1 style={{ textAlign: 'center' }}> Top Airing </h1>
             <div className='anime-details'>
               <Row>
                 <Animes animes={data.results}/>

@@ -18,6 +18,9 @@ import SearchBar from './components/SearchBar';
 import SearchResults from './components/pages/SearchResults';
 import ComingSoon from './components/pages/ComingSoon';
 import Error from './components/pages/Error';
+import TopAnimeAllTime from './components/pages/TopAnimeAllTime';
+import TopMovies from './components/pages/TopMovies';
+import TopAiring from './components/pages/TopAiring';
 
 function App() {
 
@@ -26,7 +29,6 @@ function App() {
   const start = () => {
     audio.play()
   }
-
 
   return (
     <>
@@ -50,6 +52,9 @@ function App() {
             <Route path='/ranking' component={Ranking} />
             <Route path='/most-popular' component={MostPopular} />
             <Route path='/top-upcoming' component={TopUpcoming} />
+            <Route path='/all-time' component={TopAnimeAllTime} />
+            <Route path='/top-movies' component={TopMovies} />
+            <Route path='/top-airing' component={TopAiring} />
             <Route path='/profile' exact component={Profile} />
             <Route path='/contact-us' component={ContactUs} />
             <Route path='/sign-up' exact component={SignUp} />

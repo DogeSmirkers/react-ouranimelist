@@ -76,7 +76,7 @@ function Navi() {
           {/* Ranking Page Link */}
           <li className='nav-item'>
             <Link
-              to=''
+              to='/ranking'
               className='nav-links'
               onClick={closeMobileMenu}
             >
