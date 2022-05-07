@@ -15,6 +15,12 @@ module.exports = {
         });
     },
 
+    // pretties up synopsis
+    // might add more later
+    convertSynopsis: function (synopsis) {
+        return synopsis.split('[')[0]
+    },
+
     // obj --> string of what was in obj
     // only for genres and studios, NOT pictures
     // ex: genresObj --> list of genres
@@ -35,9 +41,17 @@ module.exports = {
         return list;
     },
 
-    // pretties up synopsis
-    // might add more later
-    convertSynopsis: function (synopsis) {
-        return synopsis.split('[')[0]
+    // convert animes obj to array 
+    convertAnimes: function (animes) {
+        let obj = animes;
+        let res = [];
+        for (let i in obj) {
+            res.push([i, obj[i]]);
+        };
+        let animeList = [];
+        for(let i=0; i< res.length; i++) {
+            animeList[i] = res[i][1]['node'];
+        };
+        return animeList;
     }
 }

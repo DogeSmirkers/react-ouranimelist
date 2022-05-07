@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.css';
 import Container from 'react-bootstrap/Container';
 import GetRandom from '../GetRandom';
-import Anime from "../Anime";
+import RandoAnime from "../RandoAnime";
 
 export default function RandomAnime() {
   const { data, setData } = GetRandom();
@@ -11,7 +11,7 @@ export default function RandomAnime() {
     <>
       <p onLoad={(e) => setData({ ...data})}> </p>
       <Container>
-        {Object.keys(data.results).length > 0 ? <Anime anime={data.results} /> : null}
+        {Object.keys(data.results).length > 0 ? <RandoAnime anime={data.results} /> : null}
       </Container>
     </>
   );

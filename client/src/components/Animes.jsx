@@ -5,15 +5,7 @@ import { Row, Col } from 'react-bootstrap';
 import Tools from '../Tools';
 
 export default function Animes({ animes }) {
-  let obj = animes;
-  let res = [];
-  for (let i in obj) {
-    res.push([i, obj[i]]);
-  };
-  let animeList = [];
-  for(let i=0; i< res.length; i++) {
-    animeList[i] = res[i][1]['node'];
-  };
+  let animeList = Tools.convertAnimes(animes);
     return (
       <>
         {animeList.map((animeList) => (

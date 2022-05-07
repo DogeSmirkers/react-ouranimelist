@@ -23,6 +23,7 @@ const GetRandom = () => {
             const fetch = async () => {
                 try {
                     const res = await axios(`http://localhost:4000/search?${query}`);
+                    console.log(res.data.data[randomNum].node)
                     setData({ ...data, results: res.data.data[randomNum].node });
                 } catch (err) {
                     console.error(err);
