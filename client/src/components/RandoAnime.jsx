@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import { Row, Col, Container, Stack } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import Tools from '../Tools';
 
 export default function Anime({ anime }) {
