@@ -12,7 +12,6 @@ export default function Anime({ anime }) {
         <Row>
           <Col lg={3}>
             <img src={anime.main_picture.large} alt={anime.title} height='auto' width='100%'/>
-            {/* <p>{anime.pictures[0].medium}</p> */}
           </Col>
           <Col lg={9}>
             <h1> {anime.title} </h1>
