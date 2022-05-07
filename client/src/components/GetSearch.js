@@ -13,7 +13,8 @@ const GetSearch = () => {
         const fetch = async () => {
           try {
             const res = await axios(`http://localhost:4000/search?${data.slug}`);
-            setData({ ...data, results: res.data.data[0].node });
+            console.log(res.data.data);
+            setData({ ...data, results: res.data.data });
           } catch (err) {
             console.error(err);
           }

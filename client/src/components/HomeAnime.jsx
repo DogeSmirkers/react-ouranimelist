@@ -18,7 +18,7 @@ export default function HomeAnimes({ animes }) {
                 <div>
                     <div className='suggestion-card' key={animeList.id}>
                         <Link to={`anime/${animeList.id}/${animeList.title}`}><img src={animeList.main_picture.large} alt={animeList.title} height='300px' width='200px'/> </Link>
-                </div>
+                    </div>
                     <div style={{ marginBottom: '30px', textAlign: 'center' }}> 
                         {animeList.title}
                     </div>

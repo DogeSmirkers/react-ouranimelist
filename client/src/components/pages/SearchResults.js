@@ -1,7 +1,7 @@
 import React from 'react'
-import {Col, Row, Container} from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 import GetSearch from '../GetSearch';
-import Anime from '../Anime';
+import Animes from '../Animes';
 
 export default function SearchResults() {
   const { data, setData } = GetSearch();  
@@ -18,7 +18,7 @@ export default function SearchResults() {
             />
         </form>
         <Container>
-            {Object.keys(data.results).length > 0 ? <Anime anime={data.results} /> : null }
+            {Object.keys(data.results).length > 0 ? <Animes animes={data.results} /> : null }
         </Container>
     </>
   )
