@@ -95,14 +95,14 @@ function Navi() {
                     </Link>
                   </NavDropdown.Item>
 
-                  {/* Most Popular Page Link */}
+                  {/* Most Favorited Page Link */}
                   <NavDropdown.Item>
                     <Link
-                        to='/most-popular'
+                        to='/most-favorited'
                         className='nav-links'
                         onClick={closeMobileMenu}
                     >
-                      Most Popular
+                      Most Favorited
                     </Link>
                   </NavDropdown.Item>
               </NavDropdown>

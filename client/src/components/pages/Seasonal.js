@@ -7,6 +7,25 @@ import GetSeasonal from "../GetSeasonal";
 import HomeAnime from "../HomeAnime";
 
 export default function Seasonal() {
+  function getSeasonForNumberMonth(month) {
+    if (month < 3) {
+        return "Winter";
+    }
+    else if (month > 2 && month < 6) {
+        return "Spring";
+    }
+    else if (month > 5 && month < 9) {
+        return "Summer";
+    }
+    else {
+        return "Fall";
+    }
+  }
+  const d = new Date();
+  let month = d.getMonth();
+  let year = d.getFullYear();
+  let season = getSeasonForNumberMonth(month);
+
   const { data, setData } = GetSeasonal();
   
   return (
@@ -14,7 +33,7 @@ export default function Seasonal() {
       <p onLoad={(e) => setData({ ...data})}> </p>
       <Container fluid className='suggestion-box-pls-stop-moving'>
           <Row>
-            <h4 style={{ marginTop: '10px' }}>Seasonal Anime</h4>
+            <h4 style={{ marginTop: '10px' }}>Seasonal Anime - {season} {year}</h4>
           </Row>
           <Row style={{ marginTop: '20px' }} className='suggestion-box'>
             <Stack direction="horizontal" gap={3}>

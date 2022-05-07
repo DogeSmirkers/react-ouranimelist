@@ -9,7 +9,7 @@ module.exports = {
 
     // convert status to more readable format
     convertStatus: function (currStatus) {
-        currStatus = currStatus.replace("_"," ");
+        currStatus = currStatus.replaceAll("_"," ");
         return currStatus.replace(/\w\S*/g, function(txt){
             return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         });

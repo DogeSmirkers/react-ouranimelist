@@ -11,14 +11,14 @@ import SignUp from './components/pages/SignUp';
 import Home from './components/pages/Home';
 import Profile from './components/pages/Profile';
 import Settings from './components/pages/Settings';
-import MostPopular from './components/pages/MostPopular';
+import MostFavorited from './components/pages/MostFavorited';
 import Ranking from './components/pages/Ranking';
 import AnimeDetails from './components/pages/AnimeDetails';
 import SearchBar from './components/SearchBar';
 import SearchResults from './components/pages/SearchResults';
 import ComingSoon from './components/pages/ComingSoon';
 import Error from './components/pages/Error';
-import TopAnimeAllTime from './components/pages/TopAnimeAllTime';
+import TopAllTime from './components/pages/TopAllTime';
 import TopMovies from './components/pages/TopMovies';
 import TopAiring from './components/pages/TopAiring';
 
@@ -50,9 +50,9 @@ function App() {
             <Route path='/about-us' component={AboutUs} />
             <Route path='/random-anime' component={RandomAnime} />
             <Route path='/ranking' component={Ranking} />
-            <Route path='/most-popular' component={MostPopular} />
+            <Route path='/most-favorited' component={MostFavorited} />
             <Route path='/top-upcoming' component={TopUpcoming} />
-            <Route path='/all-time' component={TopAnimeAllTime} />
+            <Route path='/all-time' component={TopAllTime} />
             <Route path='/top-movies' component={TopMovies} />
             <Route path='/top-airing' component={TopAiring} />
             <Route path='/profile' exact component={Profile} />

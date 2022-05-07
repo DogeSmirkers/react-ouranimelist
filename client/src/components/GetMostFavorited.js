@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const GetMostPopular = () => {
+const GetMostFavorited = () => {
     const [data, setData] = useState({
         results: [],
     });
@@ -25,4 +25,4 @@ const GetMostPopular = () => {
     return { data, setData };
 };
 
-export default GetMostPopular;
+export default GetMostFavorited;

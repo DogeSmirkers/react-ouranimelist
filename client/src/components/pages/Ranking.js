@@ -17,7 +17,7 @@ export default function Ranking() {
                 <p><Link to="/top-upcoming" class="text-dark">Top Upcoming</Link></p>
               </li>
               <li>
-                <p><Link to="/most-popular" class="text-dark">Most Popular</Link></p>
+                <p><Link to="/most-favorited" class="text-dark">Most Favorited</Link></p>
               </li>              
               <li>
                 <p><Link to="/top-movies" class="text-dark">Top Anime Movies</Link></p>
