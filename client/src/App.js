@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navi from './components/Navi';
@@ -37,14 +37,9 @@ function App() {
 
           {/* Banner Image with Logo */}
           <div className='bar'>
-            <img className='logoImage' src={ require('./components/images/ouranimelist_icon_pog.png') } onClick={start}/>
+            <img className='logoImage' src={ require('./components/images/ouranimelist_icon_pog.png') } onClick={start} alt="ouranimelist logo with sakura blossom and doge smirk in middle"/>
           </div>
 
-          {/* Search Bar */}
-          {/* <form className="searchBar" action="index.html" method="GET">
-            <input type="text" name=""placeholder="Search"/>
-            <input type="submit" formaction="/search" name="" value="Go"/>
-          </form> */}
           <SearchBar />
 
           {/* Displays content on page */}
@@ -61,7 +56,7 @@ function App() {
             <Route path='/sign-up' exact component={SignUp} />
             <Route path='/settings' component={Settings} />
             <Route path='/anime/:title' component={AnimeDetails} />
-            <Route path='/search-results/:title' component={SearchResults} />
+            <Route path='/search' component={SearchResults} />
             <Route path='/coming-soon' component={ComingSoon} />
             <Route path='/error' component={Error} />
           </Switch>

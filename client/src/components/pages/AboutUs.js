@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Container, Row, Card } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import '../../App.css';
 import Marquee from 'react-fast-marquee';
 

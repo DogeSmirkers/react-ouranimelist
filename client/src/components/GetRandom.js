@@ -4,7 +4,6 @@ import axios from "axios";
 const GetRandom = () => {
     function generateRandomLetter() {
         const alphabet = "abcdefghijklmnopqrstuvwxyz"
-        const vowel = "aeiou"
         // query must be at least 3 letters
         return alphabet[Math.floor(Math.random() * alphabet.length)] 
     }
@@ -24,7 +23,6 @@ const GetRandom = () => {
             const fetch = async () => {
                 try {
                     const res = await axios(`http://localhost:4000/search?${query}`);
-                    console.log(res.data.data[randomNum].node)
                     setData({ ...data, results: res.data.data[randomNum].node });
                 } catch (err) {
                     console.error(err);

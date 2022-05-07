@@ -3,7 +3,7 @@ import { useSpring, animated } from 'react-spring';
 import styled from 'styled-components';
 import { MdClose } from 'react-icons/md';
 import { Link } from 'react-router-dom';
-import { Container, Row, Form, Button } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 
 const Background = styled.div`
   width: 100%;

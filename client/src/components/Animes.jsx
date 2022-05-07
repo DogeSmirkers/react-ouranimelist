@@ -1,16 +1,30 @@
-import React from "react";
-import Anime from "./Anime";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Row, Col } from 'react-bootstrap';
 
-export default function Animes({ anime }) {
-  return (
-    <div>
-      <ul>
-        <li>title: {anime.title}</li>
-        <li>id: {anime.id}</li>
-        <img src={'large' in anime.main_picture ? anime.main_picture.large: anime.main_picture.medium} alt={anime.title}></img>
-        <li>{anime.genres[2].name}</li>
-        <Anime anime={anime}/>
-      </ul> 
-    </div>
+export default function Animes({ animes }) {
+    
+    let obj = animes;
+    let res = [];
+    for (let i in obj) {
+        res.push([i, obj[i]]);
+    };
+    let animeList = [];
+    for(let i=0; i< res.length; i++) {
+        animeList[i] = res[i][1]['node'];
+    };
+    return (
+        <>
+            {animeList.map((animeList) => (
+                <div>
+                    <div className='suggestion-card' key={animeList.id}>
+                        <Link to={`anime/${animeList.id}/${animeList.title}`}><img src={animeList.main_picture.large} alt={animeList.title} height='300px' width='200px'/> </Link>
+                </div>
+                    <div style={{ marginBottom: '30px', textAlign: 'center' }}> 
+                        {animeList.title}
+                    </div>
+                </div>
+            ))}
+        </>
   );
 }

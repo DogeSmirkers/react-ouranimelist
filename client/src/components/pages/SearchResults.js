@@ -1,29 +1,25 @@
 import React from 'react'
 import {Col, Row, Container} from 'react-bootstrap';
-import GetDetails from '../GetDetails';
+import GetSearch from '../GetSearch';
+import Anime from '../Anime';
 
-export default function SearchResults(match) {
-  
-  const {
-    params: { title }
-  } = match;
-  
-  // search query
-  // const { search } = useLocation();
-  // console.log(search);
-
-  const { data, setData } = GetDetails(title);  
+export default function SearchResults() {
+  const { data, setData } = GetSearch();  
 
   return (
     <>
-      <p onLoad={(e) => setData({ ...data})}> </p>
-      <Container>
-          <Row>
-              <Col>
-                  <h1>I'm a result uwu</h1>
-              </Col>
-          </Row>
-      </Container>
+        <p onLoad={(e) => setData({ ...data})}> </p>
+        <form className="searchBar" method="GET">
+            <input
+            type="text"
+            placeholder="Search..."
+            value={data.slug}
+            onChange={(e) => setData({ ...data, slug: e.target.value.toLowerCase() })}
+            />
+        </form>
+        <Container>
+            {Object.keys(data.results).length > 0 ? <Anime anime={data.results} /> : null }
+        </Container>
     </>
   )
 }
