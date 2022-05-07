@@ -9,9 +9,10 @@ module.exports = {
 
     // convert status to more readable format
     convertStatus: function (currStatus) {
-        currStatus = currStatus.charAt(0).toUpperCase() + currStatus.slice(1);
         currStatus = currStatus.replace("_"," ");
-        return currStatus;
+        return currStatus.replace(/\w\S*/g, function(txt){
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        });
     },
 
     // obj --> string of what was in obj

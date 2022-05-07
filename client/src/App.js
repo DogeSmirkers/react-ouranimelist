@@ -45,7 +45,6 @@ function App() {
           {/* Displays content on page */}
           <Switch>
             <Route path='/' exact component={Home} />
-            {/* <Route path='/search' component={Search} /> */}
             <Route path='/about-us' component={AboutUs} />
             <Route path='/random-anime' component={RandomAnime} />
             <Route path='/ranking' component={Ranking} />
@@ -58,13 +57,13 @@ function App() {
             <Route path='/anime/:title' component={AnimeDetails} />
             <Route path='/search' component={SearchResults} />
             <Route path='/coming-soon' component={ComingSoon} />
-            <Route path='/error' component={Error} />
+            <Route path='/404' component={Error} />
           </Switch>
         </Router>
 
         {/* Footer */}
         <div className='footer'>
-          <h8>Designed and Managed by <a className='dogesmirk' href="https://github.com/DogeSmirkers" target="_blank" rel="noreferrer"><i>Team DogeSmirk</i></a> <img src={require('./components/images/dogesmirk.jpg')} alt="" height="16px" width="auto" onClick={start}/></h8>
+          <h8>Designed and Managed by <a className='dogesmirk' href="https://github.com/DogeSmirkers" target="_blank" rel="noreferrer"><i>Team DogeSmirk</i></a> <img src={require('./components/images/dogesmirk.jpg')} alt="doge smirk" height="16px" width="auto" onClick={start}/></h8>
         </div>
     </div>
     </>
