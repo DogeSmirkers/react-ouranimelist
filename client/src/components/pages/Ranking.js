@@ -1,13 +1,13 @@
 import React from 'react';
 import '../../App.css';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export default function Ranking() {
   return (
     <>
         <Container>
-          <h1 style={{ textAlign: 'center' }}> Rank Kings 👑 </h1>
+          <h1 style={{ textAlign: 'center' }}> <Link to="/anime/40834/Ousama%20Ranking" class="text-dark" style={{ textDecoration: 'none'}}>Rank Kings 👑</Link> </h1>
           <div className='anime-details'>
             <ul>
               <li>
