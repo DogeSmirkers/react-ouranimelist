@@ -3,6 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navi from './components/Navi';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { matchPath } from 'react-router';
 import TopUpcoming from './components/pages/TopUpcoming';
 import RandomAnime from './components/pages/RandomAnime';
 import AboutUs from './components/pages/AboutUs';
@@ -31,6 +32,12 @@ export default function App() {
     audio.play()
   }
   
+  /* 
+    get location in order to see if path matches /search, 
+    if it's a match, don't render the searchBar component
+  */
+  // const matchSearch = !!matchPath(location.pathname, '/search');
+
   return (
     <>
       <div className='body'>
@@ -43,6 +50,8 @@ export default function App() {
             <img className='logoImage' src={ require('./components/images/ouranimelist_icon_pog.png') } onClick={start} alt="ouranimelist logo with sakura blossom and doge smirk in middle"/>
           </div>
 
+          {/* If URL is '/search', we make searchBar hidden */}
+          {}
           <SearchBar />
 
           {/* Displays content on page */}

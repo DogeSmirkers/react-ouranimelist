@@ -2,6 +2,7 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import GetSearch from '../GetSearch';
 import Animes from '../Animes';
+import SearchBar from '../SearchBar';
 
 export default function SearchResults() {
   const { data, setData } = GetSearch();  

@@ -7,23 +7,22 @@ export default function Settings() {
   return (
     <>
       <Container>
-          <h1 style={{ textAlign: 'center' }}>Settings </h1>
-          <div className='random-anime'>
+          <h1 style={{ textAlign: 'center', marginTop: '20px' }}>Settings </h1>
+          <div className='anime-details'>
             <Row>
               <Col lg={3}>
                 <Link to="">
-                  {/* <img src={require("../images/naruto.jpg")} alt="Card image" width={ '100%' }/> */}
-                  Profile Image
+                  <img src={require("../images/enteipfp.jpg")} alt="entei" width={ '100%' }/>
                 </Link>
               </Col>
               <Col lg={9}>
                 <h3> DogeSmirker_CoCo </h3>
                 <br/><br/>
-                <Button variant="outline-custom">Edit Username</Button>
+                <Link to='/coming-soon'><Button variant="outline-custom">Edit Username</Button></Link>
                 <br/><br/>
-                <Button variant="outline-custom">Change Password</Button>
+                <Link to='/coming-soon'><Button variant="outline-custom">Change Password</Button></Link>
                 <br/><br/>
-                <Button variant="outline-danger">Delete Account</Button>
+                <Link to='/coming-soon'><Button variant="outline-danger">Delete Account</Button></Link>
               </Col>
             </Row>
           </div>

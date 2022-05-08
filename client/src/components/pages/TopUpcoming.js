@@ -15,7 +15,7 @@ export default function TopUpcoming() {
                 <Animes animes={data.results}/>
               </Row>
             </div>
-        </Container>
+      </Container>
     </>
   );
 }

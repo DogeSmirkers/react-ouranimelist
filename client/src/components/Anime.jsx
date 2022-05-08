@@ -36,19 +36,18 @@ export default function Anime({ anime }) {
       </div>
       {Object.keys(anime.pictures).length > 0 ? 
         <Container fluid className='suggestion-box-pls-stop-moving'> 
-        <Row>
-          <h4 style={{ marginTop: '10px' }}>Pictures</h4>
-        </Row>
-        <Row style={{ marginTop: '20px' }} className='suggestion-box'>
-          <Stack direction="horizontal" gap={3}>
-            {pics.map((pics) => (
-              <div>
-                <div className='suggestion-card' key={pics.medium}></div>
-                <img src={pics.medium} alt=""/>                  
-              </div>                  
-            ))} 
-          </Stack>
-        </Row>
+          <Row>
+            <h4 style={{ marginTop: '10px', marginLeft: '10px' }}>Pictures</h4>
+          </Row>
+          <Row style={{ marginTop: '20px' }} className='suggestion-box'>
+            <Stack direction="horizontal" gap={3}>
+              {pics.map((pics) => (
+                <div className='pictures' key={pics.medium}>
+                  <img src={pics.medium} alt={anime.title}/>                  
+                </div>                  
+              ))} 
+            </Stack>
+          </Row>
         </Container> 
         : null
       }
