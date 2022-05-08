@@ -2,16 +2,17 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import '../../App.css';
 import Marquee from 'react-fast-marquee';
+import pikaCry from '../assets/pikachu-cry.mp3'
 
 export default function AboutUs() {
-  let audio = new Audio("/bark.mp3")
-  let pika = new Audio("/pikachu-cry.mp3")
+  let audio = new Audio("/bark.mp3");
+  let pika = new Audio(pikaCry);
 
   const start = () => {
-    audio.play()
+    audio.play();
   }
   const go = () => {
-    pika.play()
+    pika.play();
   }
   return (
     <>
@@ -72,7 +73,7 @@ export default function AboutUs() {
           <p>We designed our app for discovering anime, tracking what the users are currently watching, checking the reviews of the anime users want to know and the discussions. You can think of it as IMDb but for anime. We took our inspirations from <a href="https://myanimelist.net/" target="_blank" rel="noreferrer"><u>MyAnimeList</u></a>.</p>
           <br></br>
 
-          <h4>"Pretty, not function"</h4>
+          <h4>"Pretty, and function"</h4>
         </Col>
       </Row>
       <Row>

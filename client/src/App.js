@@ -22,14 +22,14 @@ import TopAllTime from './components/pages/TopAllTime';
 import TopMovies from './components/pages/TopMovies';
 import TopAiring from './components/pages/TopAiring';
 
-function App() {
+export default function App() {
 
   let audio = new Audio("/bark.mp3")
 
   const start = () => {
     audio.play()
   }
-
+  
   return (
     <>
       <div className='body'>
@@ -74,5 +74,3 @@ function App() {
     </>
   );
 }
-
-export default App;
