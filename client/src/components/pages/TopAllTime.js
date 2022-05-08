@@ -15,7 +15,7 @@ export default function TopAllTime() {
                 <Animes animes={data.results}/>
               </Row>
             </div>
-        </Container>
+      </Container>
     </>
   );
 }

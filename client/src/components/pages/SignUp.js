@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../App.css';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 export default function SignUp() {
   return (
@@ -49,13 +48,12 @@ export default function SignUp() {
                   </Col>
                   <Col lg={{ span: 4 }} className="right-form">
                     <br/>
-                    <img src={require("../images/dogeLick.jpeg")} alt="Card image"/>  
+                    <img src={require("../images/dogeLick.jpeg")} alt="doge lick"/>  
                     <h4> Pretty, Not Function </h4>
                   </Col>
               </Row>
             </div>
           </Col>
-          {/* <Col sm={0} lg={2}></Col> */}
           <Col sm={0} lg={3}></Col>
         </Row>
       </Container>

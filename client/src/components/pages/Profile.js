@@ -7,21 +7,21 @@ export default function Profile() {
   return (
     <>
       <Container className="profile">
-        <h1 style={{ textAlign: 'center' }}> Profile </h1>
-        <div className='random-anime'>
+        <h1 style={{ textAlign: 'center', marginTop: '20px' }}> Profile </h1>
+        <div className='anime-details'>
           <Row>
             <Col lg={3}>
-              <img src={require("../images/enteipfp.jpg")} alt="Card image"/>
+              <img src={require("../images/enteipfp.jpg")} alt="entei"/>
             </Col>
             <Col lg={6}>
               <h3> DogeSmirker_CoCo </h3>
-              <p> Joined November 6</p>
+              <p> Joined April 20 </p>
               <p> "Anime was a mistake" </p>
             </Col>
             <Col lg={3}>
               <Link to='/Settings'><Button variant="outline-custom">Edit Profile</Button></Link>
               <br/><br/>
-              <Button variant="outline-custom">Add Anime</Button>
+              <Link to='/coming-soon'><Button variant="outline-custom">Add Anime</Button></Link>
             </Col>
           </Row>
           <Row style={{ marginTop: 30 }}>

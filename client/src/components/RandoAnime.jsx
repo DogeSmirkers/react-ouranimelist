@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 import { Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Tools from '../Tools';
 
 export default function Anime({ anime }) {
@@ -9,7 +10,7 @@ export default function Anime({ anime }) {
       <div className='anime-details'>
         <Row>
           <Col lg={3}>
-            <img src={anime.main_picture.large} alt={anime.title} height='auto' width='100%'/>
+            <Link to={`anime/${anime.id}/${anime.title}`}><img src={anime.main_picture.large} alt={anime.title} height='auto' width='100%'/></Link>
           </Col>
           <Col lg={9}>
             <h1> {anime.title} </h1>
