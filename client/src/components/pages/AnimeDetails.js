@@ -6,9 +6,9 @@ import Anime from '../Anime';
 
 export default function AnimeDetails({match}) {
     const {
-        params: { title }
+        params: { id }
       } = match;
-    const { data, setData } = GetDetails(title);
+    const { data, setData } = GetDetails(id);
     return (
         <>
             <p onLoad={(e) => setData({ ...data})}> </p>
