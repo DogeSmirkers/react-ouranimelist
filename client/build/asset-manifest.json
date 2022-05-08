@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a39a2003.css",
+    "main.js": "/static/js/main.5402eba1.js",
+    "static/media/loginbackground4.png": "/static/media/loginbackground4.1c6496c3537218821958.png",
+    "static/media/comicBackground.png": "/static/media/comicBackground.fa44b53da9499e5b75b9.png",
+    "static/media/logobanner.jpeg": "/static/media/logobanner.a60a0a79f1e43a1faff2.jpeg",
+    "static/media/gintama.jpg": "/static/media/gintama.c77ebafabd5f7908a9d1.jpg",
+    "static/media/blueperiod.jpg": "/static/media/blueperiod.724986146c047c6f82b2.jpg",
+    "static/media/k-on.jpg": "/static/media/k-on.ed3ad0ea10b4aeae8e24.jpg",
+    "static/media/kimuwu1.png": "/static/media/kimuwu1.4608f1e61000bba58904.png",
+    "static/media/oddtaxi.jpg": "/static/media/oddtaxi.360447abe5890b9e4713.jpg",
+    "static/media/aboutBackground.jpg": "/static/media/aboutBackground.06e6079d160ca131969a.jpg",
+    "static/media/leon_smirk.jpg": "/static/media/leon_smirk.9d8039d19a9df2255559.jpg",
+    "static/media/hawyeepika.png": "/static/media/hawyeepika.8d5158a0cc47ca818987.png",
+    "static/media/enteipfp.jpg": "/static/media/enteipfp.b4a822412beb507d878e.jpg",
+    "static/media/ouranimelist_icon_pog.png": "/static/media/ouranimelist_icon_pog.a6957f171cf4d5410913.png",
+    "static/media/sansation_light_italic-webfont.woff": "/static/media/sansation_light_italic-webfont.06e2d1eb02a33d8f9ee6.woff",
+    "static/media/sansation_italic-webfont.woff": "/static/media/sansation_italic-webfont.db4760698cf0f620dc5d.woff",
+    "static/media/sansation_bold_italic-webfont.woff": "/static/media/sansation_bold_italic-webfont.82945f784632a055da8c.woff",
+    "static/media/sansation_bold-webfont.woff": "/static/media/sansation_bold-webfont.d8acde7de0c28ec80f84.woff",
+    "static/media/sansation_light-webfont.woff": "/static/media/sansation_light-webfont.5a0ce8e27bb29b79963b.woff",
+    "static/media/sansation_regular-webfont.woff": "/static/media/sansation_regular-webfont.4741b609e5d29f781fd3.woff",
+    "static/media/sansation_light_italic-webfont.woff2": "/static/media/sansation_light_italic-webfont.bb92626b73cc67037ea0.woff2",
+    "static/media/sansation_italic-webfont.woff2": "/static/media/sansation_italic-webfont.da3de850c0558cbcb2f8.woff2",
+    "static/media/sansation_bold_italic-webfont.woff2": "/static/media/sansation_bold_italic-webfont.7a7b7c2bd1971280e32d.woff2",
+    "static/media/sansation_bold-webfont.woff2": "/static/media/sansation_bold-webfont.7ebc076d36c5dc866fa5.woff2",
+    "static/media/sansation_light-webfont.woff2": "/static/media/sansation_light-webfont.f52b77fb1214a3cd9049.woff2",
+    "static/media/sansation_regular-webfont.woff2": "/static/media/sansation_regular-webfont.c7463d0027e5e68a6ce0.woff2",
+    "static/media/pikachu-cry.mp3": "/static/media/pikachu-cry.0b834e40f47381e04630.mp3",
+    "static/media/dogesmirk.jpg": "/static/media/dogesmirk.40d6526f8b883d08531f.jpg",
+    "static/media/wind.png": "/static/media/wind.aac7fbb2f12ebe041948.png",
+    "static/media/bark.mp3": "/static/media/bark.2f97a7dd0dee82b1371e.mp3",
+    "index.html": "/index.html",
+    "main.a39a2003.css.map": "/static/css/main.a39a2003.css.map",
+    "main.5402eba1.js.map": "/static/js/main.5402eba1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a39a2003.css",
+    "static/js/main.5402eba1.js"
+  ]
+}
