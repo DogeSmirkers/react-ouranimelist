@@ -3,9 +3,10 @@ import { Col, Container, Row } from 'react-bootstrap';
 import '../../App.css';
 import Marquee from 'react-fast-marquee';
 import pikaCry from '../assets/pikachu-cry.mp3'
+import bark from '../assets/bark.mp3'
 
 export default function AboutUs() {
-  let audio = new Audio("/bark.mp3");
+  let audio = new Audio(bark);
   let pika = new Audio(pikaCry);
 
   const start = () => {

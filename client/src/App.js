@@ -23,10 +23,11 @@ import TopAllTime from './components/pages/TopAllTime';
 import TopMovies from './components/pages/TopMovies';
 import TopAiring from './components/pages/TopAiring';
 import Pikachu from './components/pages/Pikachu';
+import bark from './components/assets/bark.mp3'
 
 export default function App() {
 
-  let audio = new Audio("/bark.mp3")
+  let audio = new Audio(bark)
 
   const start = () => {
     audio.play()
