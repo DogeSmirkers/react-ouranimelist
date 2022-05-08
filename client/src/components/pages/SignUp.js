@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../App.css';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 export default function SignUp() {
   return (

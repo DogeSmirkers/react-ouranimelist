@@ -11,7 +11,7 @@ export default function Profile() {
         <div className='random-anime'>
           <Row>
             <Col lg={3}>
-              <img src={require("../images/enteipfp.jpg")} alt="Card image"/>
+              <img src={require("../images/enteipfp.jpg")} alt="entei"/>
             </Col>
             <Col lg={6}>
               <h3> DogeSmirker_CoCo </h3>

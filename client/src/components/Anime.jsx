@@ -44,7 +44,7 @@ export default function Anime({ anime }) {
             {pics.map((pics) => (
               <div>
                 <div className='suggestion-card' key={pics.medium}></div>
-                <img src={pics.medium} />                  
+                <img src={pics.medium} alt=""/>                  
               </div>                  
             ))} 
           </Stack>
