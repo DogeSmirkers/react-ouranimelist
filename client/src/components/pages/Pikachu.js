@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.css';
 import Container from 'react-bootstrap/Container';
 
-export default function ComingSoon() {
+export default function Pikachu() {
   
   return (
     <>
