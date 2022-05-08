@@ -21,6 +21,7 @@ import Error from './components/pages/Error';
 import TopAllTime from './components/pages/TopAllTime';
 import TopMovies from './components/pages/TopMovies';
 import TopAiring from './components/pages/TopAiring';
+import Pikachu from './components/pages/Pikachu';
 
 export default function App() {
 
@@ -63,6 +64,7 @@ export default function App() {
             <Route path='/search' component={SearchResults} />
             <Route path='/coming-soon' component={ComingSoon} />
             <Route path='/404' component={Error} />
+            <Route path='/pikachu' component={Pikachu} />
           </Switch>
         </Router>
 

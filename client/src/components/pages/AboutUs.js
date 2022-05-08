@@ -70,7 +70,7 @@ export default function AboutUs() {
         <Col className="about-our-app">
           <br/>
           <h1>About our App</h1>
-          <p>We designed our app for discovering anime, tracking what the users are currently watching, checking the reviews of the anime users want to know and the discussions. You can think of it as IMDb but for anime. We took our inspirations from <a href="https://myanimelist.net/" target="_blank" rel="noreferrer"><u>MyAnimeList</u></a>.</p>
+          <p>We designed our app for discovering anime, tracking what the users are currently watching, checking the reviews of the anime users want to know and the discussions. You can think of it as IMDb but for anime. We took our inspirations from <a href="https://myanimelist.net/" target="_blank" rel="noreferrer" className='text-dark'><u>MyAnimeList</u></a>.</p>
           <br></br>
 
           <h4>"Pretty, and function"</h4>
@@ -89,6 +89,7 @@ export default function AboutUs() {
         <Col>
           <img className='teamImg' src={require('../images/hawyeepika.png')} alt="sad pixel pikachu with cowboy hat" height='200px' onClick={go}/>
           <h4 className='centerText'><a className='teamLink' href='https://github.com/LuongMonica' target="_blank" rel="noreferrer">Monica</a></h4>
+          <p className='centerText'>"Psst, lemme tell you about a secret page I hid. Your hint: my favorite Pokemon."</p>
         </Col>
         <Col>
           <img className='teamImg' src={require('../images/kimuwu1.png')} alt="isabelle from animal crossing with suprised face and exclamation point" height='200px' onClick={start}/>
