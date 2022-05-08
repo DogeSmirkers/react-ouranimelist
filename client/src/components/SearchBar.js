@@ -1,15 +1,16 @@
 import React from 'react';
 import '../App.css';
+import {Container} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function SearchBar() {
+export default function SearchBar() {
   return (
     <>
-        <form className="searchBar" action="index.html" method="GET">
-            <input type="text" name=""placeholder="Search"/>
-            <input type="submit" formaction="/search" name="" value="Go"/>
+      <Container fluid className='searchBar'>
+        <form method="GET">
+            <input type="submit" formAction="/search" name="" value="Search"/>
         </form>
+      </Container>
     </>
   );
 }
-
-export default SearchBar;

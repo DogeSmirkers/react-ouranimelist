@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
+import axios from 'axios';
 
-import api from "./api";
-
-const useFetch = () => {
+const GetSearch = () => {
   const [data, setData] = useState({
     slug: "",
     results: [],
@@ -13,8 +12,9 @@ const useFetch = () => {
       const timeoutId = setTimeout(() => {
         const fetch = async () => {
           try {
-            const res = await api.get(`/${data.slug}`);
-            setData({ ...data, results: res.data });
+            const res = await axios(`http://localhost:4000/search?${data.slug}`);
+            console.log(res.data.data);
+            setData({ ...data, results: res.data.data });
           } catch (err) {
             console.error(err);
           }
@@ -24,8 +24,8 @@ const useFetch = () => {
       return () => clearTimeout(timeoutId);
     }
   }, [data.slug]);
-  
+
   return { data, setData };
 };
 
-export default useFetch;
+export default GetSearch;

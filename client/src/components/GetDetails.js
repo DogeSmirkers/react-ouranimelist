@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-
-import api from "./api";
+import axios from "axios";
 
 const GetDetails = (id) => {
   const [data, setData] = useState({
@@ -12,7 +11,7 @@ const GetDetails = (id) => {
       const timeoutId = setTimeout(() => {
         const fetch = async () => {
           try {
-            const res = await api.get(`/${id}`);
+            const res = await axios.get(`http://localhost:4000/anime/${id}`);
             setData({ ...data, results: res.data });
           } catch (err) {
             console.error(err);

@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 const search = require('./Search')
 // search by title using query string
 app.get('/search', (req, res, next) => {
-    const query = req.query
+    const query = req.query;
     search.Search(query)
     .then(data => {
         res.status(200).send(data);
@@ -25,16 +25,6 @@ app.get('/search', (req, res, next) => {
     })
     .catch(next);
 })
-// search by title using req params
-// app.get('/search/:query', (req, res, next) => {
-//     const query = req.params.query
-//     search.Search(query)
-//     .then(data => {
-//         res.status(200).send(data);
-//         console.log(data);
-//     })
-//     .catch(next);
-// })
 
 const getDetails = require('./GetDetails')
 // get anime details 
@@ -43,7 +33,7 @@ app.get('/anime/:id', (req, res, next) => {
     getDetails.GetDetails(id)
     .then(data => {
         res.status(200).send(data);
-        console.log(data)
+        console.log(data);
     })
     .catch(next);
 })
@@ -54,6 +44,7 @@ app.get('/seasonal', (req, res, next) => {
     getSeasonal.GetSeasonal()
     .then(data => {
         res.status(200).send(data);
+        console.log(data);
     })
     .catch(next);
 })
@@ -61,9 +52,11 @@ app.get('/seasonal', (req, res, next) => {
 const getRanking = require('./GetRanking');
 // get anime ranking
 app.get('/ranking', (req, res, next) => {
-    getRanking.GetRanking()
+    const rankingType = req.query.rankingType;
+    getRanking.GetRanking(rankingType)
     .then(data => {
         res.status(200).send(data);
+        console.log(data);
     })
     .catch(next)
 })

@@ -4,7 +4,6 @@ import axios from "axios";
 const GetRandom = () => {
     function generateRandomLetter() {
         const alphabet = "abcdefghijklmnopqrstuvwxyz"
-        const vowel = "aeiou"
         // query must be at least 3 letters
         return alphabet[Math.floor(Math.random() * alphabet.length)] 
     }
@@ -19,7 +18,6 @@ const GetRandom = () => {
     const [data, setData] = useState({
         results: [],
     });
-
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             const fetch = async () => {

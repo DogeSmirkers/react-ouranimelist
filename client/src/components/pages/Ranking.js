@@ -1,58 +1,31 @@
 import React from 'react';
 import '../../App.css';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export default function Ranking() {
   return (
     <>
         <Container>
-          <h1 style={{ textAlign: 'center' }}> Ranking </h1>
-            <div className='anime-details'>
-              <Row>
-                <h3> Number 1 </h3>
-                <Col lg={2}>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image" width={ '100%' }/></Link>
-                </Col>
-                <Col lg={10}>
-                  <h4> Naruto Shippuden </h4>
-                  <p>Naruto Shippuden is the second series of Naruto anime that follows the titular hero on his quest to become Hokage. Unlike the first series, Naruto is now older and has new teachers to help him through his adventure.</p>
-                  <p>Episode count - 500</p> 
-                </Col>
-              </Row>
-              <Row style={{ marginTop: 30}}>
-                <h3> Number 2 </h3>
-                <Col lg={2}>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image" width={ '100%' }/></Link>
-                </Col>
-                <Col lg={10}>
-                  <h4> Naruto Shippuden </h4>
-                  <p>Naruto Shippuden is the second series of Naruto anime that follows the titular hero on his quest to become Hokage. Unlike the first series, Naruto is now older and has new teachers to help him through his adventure.</p>
-                  <p>Episode count - 500</p> 
-                </Col>
-              </Row>
-              <Row style={{ marginTop: 30}}>
-                <h3> Number 3 </h3>
-                <Col lg={2}>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image" width={ '100%' }/></Link>
-                </Col>
-                <Col lg={10}>
-                  <h4> Naruto Shippuden </h4>
-                  <p>Naruto Shippuden is the second series of Naruto anime that follows the titular hero on his quest to become Hokage. Unlike the first series, Naruto is now older and has new teachers to help him through his adventure.</p>
-                  <p>Episode count - 500</p> 
-                </Col>
-              </Row>
-              <Row style={{ marginTop: 30}}>
-                <h3> Number 4 </h3>
-                <Col lg={2}>
-                  <Link to=""><img src={require("../images/naruto.jpg")} alt="Card image" width={ '100%' }/></Link>
-                </Col>
-                <Col lg={10}>
-                  <h4> Naruto Shippuden </h4>
-                  <p>Naruto Shippuden is the second series of Naruto anime that follows the titular hero on his quest to become Hokage. Unlike the first series, Naruto is now older and has new teachers to help him through his adventure.</p>
-                  <p>Episode count - 500</p> 
-                </Col>
-              </Row>
+          <h1 style={{ textAlign: 'center' }}> <Link to="/anime/40834/Ousama%20Ranking" class="text-dark" style={{ textDecoration: 'none'}}>👑 Rank Kings 👑</Link> </h1>
+          <div className='anime-details'>
+            <ul>
+              <li>
+                <p><Link to="/all-time" class="text-dark">Top Anime of All Time</Link></p>
+              </li>
+              <li>
+                <p><Link to="/top-upcoming" class="text-dark">Top Upcoming</Link></p>
+              </li>
+              <li>
+                <p><Link to="/most-favorited" class="text-dark">Most Favorited</Link></p>
+              </li>              
+              <li>
+                <p><Link to="/top-movies" class="text-dark">Top Anime Movies</Link></p>
+              </li>
+              <li>
+                <p><Link to="/top-airing" class="text-dark">Top Airing</Link></p>
+              </li>
+            </ul>
           </div>
         </Container>
     </>

@@ -1,10 +1,6 @@
 import React from 'react';
-import axios from 'axios';
 import '../../App.css';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Stack from 'react-bootstrap/Stack';
-import Container from 'react-bootstrap/Container';
+import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import GetPersonalSuggestion from '../GetPersonalSuggestion';
 import Tools from '../../Tools'

@@ -50,7 +50,7 @@ export default class CreateUser extends Component {
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" value={this.state.password} onChange={this.onChangeUserPassword}/>
               </Form.Group>
-
+            
               <Button variant="primary" type="submit">
                 Create User
               </Button>

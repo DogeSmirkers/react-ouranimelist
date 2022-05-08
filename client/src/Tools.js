@@ -9,9 +9,16 @@ module.exports = {
 
     // convert status to more readable format
     convertStatus: function (currStatus) {
-        currStatus = currStatus.charAt(0).toUpperCase() + currStatus.slice(1);
-        currStatus = currStatus.replace("_"," ");
-        return currStatus;
+        currStatus = currStatus.replaceAll("_"," ");
+        return currStatus.replace(/\w\S*/g, function(txt){
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        });
+    },
+
+    // pretties up synopsis
+    // might add more later
+    convertSynopsis: function (synopsis) {
+        return synopsis.split('[')[0]
     },
 
     // obj --> string of what was in obj
@@ -34,9 +41,17 @@ module.exports = {
         return list;
     },
 
-    // pretties up synopsis
-    // might add more later
-    convertSynopsis: function (synopsis) {
-        return synopsis.split('[')[0]
+    // convert animes obj to array 
+    convertAnimes: function (animes) {
+        let obj = animes;
+        let res = [];
+        for (let i in obj) {
+            res.push([i, obj[i]]);
+        };
+        let animeList = [];
+        for(let i=0; i< res.length; i++) {
+            animeList[i] = res[i][1]['node'];
+        };
+        return animeList;
     }
 }

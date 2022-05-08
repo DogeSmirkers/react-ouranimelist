@@ -1,11 +1,9 @@
 import React from 'react';
 import '../App.css';
-import { Row, Col, Container, Stack } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import Tools from '../Tools';
 
 export default function Anime({ anime }) {
-  let pics = [];
-  if (Object.keys(anime.pictures).length > 0) {pics = anime.pictures;}
   return (
     <> 
       <div className='anime-details'>
@@ -34,24 +32,6 @@ export default function Anime({ anime }) {
           </Col>
         </Row>
       </div>
-      {Object.keys(anime.pictures).length > 0 ? 
-        <Container fluid className='suggestion-box-pls-stop-moving'> 
-        <Row>
-          <h4 style={{ marginTop: '10px' }}>Pictures</h4>
-        </Row>
-        <Row style={{ marginTop: '20px' }} className='suggestion-box'>
-          <Stack direction="horizontal" gap={3}>
-            {pics.map((pics) => (
-              <div>
-                <div className='suggestion-card' key={pics.medium}></div>
-                <img src={pics.medium} />                  
-              </div>                  
-            ))} 
-          </Stack>
-        </Row>
-        </Container> 
-        : null
-      }
     </>
   );
 }
