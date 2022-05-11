@@ -1,9 +1,11 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import '../../App.css';
 import Marquee from 'react-fast-marquee';
-import pikaCry from '../assets/pikachu-cry.mp3'
-import bark from '../assets/bark.mp3'
+import pikaCry from '../assets/pikachu-cry.mp3';
+import bark from '../assets/bark.mp3';
 
 export default function AboutUs() {
   let audio = new Audio(bark);

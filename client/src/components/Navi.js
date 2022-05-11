@@ -4,12 +4,11 @@ import './Navi.css';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Modal } from './Modal';
 import { GlobalStyle } from './../globalStyles';
-import { Button, NavDropdown } from 'react-bootstrap';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Button from 'react-bootstrap/Button';
 
 function Navi() {
   const [click, setClick] = useState(false);
-  // const [dropdown, setDropdown] = useState(false);
-
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 

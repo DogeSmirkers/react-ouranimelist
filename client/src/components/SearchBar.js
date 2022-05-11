@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import {Container} from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function SearchBar() {

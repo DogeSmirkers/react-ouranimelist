@@ -33,12 +33,6 @@ export default function App() {
     audio.play()
   }
   
-  /* 
-    get location in order to see if path matches /search, 
-    if it's a match, don't render the searchBar component
-  */
-  // const matchSearch = !!matchPath(location.pathname, '/search');
-
   return (
     <>
       <div className='body'>

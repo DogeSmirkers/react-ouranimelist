@@ -1,7 +1,9 @@
 import React from 'react';
 import '../../App.css';
-import { Row, Container, Carousel } from 'react-bootstrap';
-import Seasonal from './Seasonal'
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
+import Carousel from 'react-bootstrap/Carousel';
+import Seasonal from './Seasonal';
 import TopAnimeAllTime from './TopAnimeAllTime';
 import PersonalSuggestion from './PersonalSuggestion';
 
