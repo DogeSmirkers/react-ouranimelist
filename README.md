@@ -46,6 +46,7 @@ cd /react-ouranimelist/server && npm i
 ```
 cd /react-ouranimelist/server && nodemon start 
 ```
+- Note: if you're getting an error that `nodemon` cannot be found, try `npx nodemon start`
 9. start the front-end 
 ```
 cd /react-ouranimelist/client && npm start
