@@ -10,7 +10,7 @@ const GetSeasonal = () => {
         const timeoutId = setTimeout(() => {
             const fetch = async () => {
                 try {
-                    const res = await axios("https://ouranimelist.ninja:4000/seasonal");
+                    const res = await axios("http://localhost:4000/seasonal");
                     setData({ ...data, results: res.data.data });
                 } catch (err) {
                     console.error(err);
