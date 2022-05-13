@@ -10,7 +10,7 @@ const GetTopAllTime = () => {
         const timeoutId = setTimeout(() => {
             const fetch = async () => {
                 try {
-                    const res = await axios("http://ouranimelist.ninja:4000/ranking");
+                    const res = await axios("https://ouranimelist.ninja:4000/ranking");
                     setData({ ...data, results: res.data.data });
                 } catch (err) {
                     console.error(err);

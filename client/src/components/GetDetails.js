@@ -11,7 +11,7 @@ const GetDetails = (id) => {
       const timeoutId = setTimeout(() => {
         const fetch = async () => {
           try {
-            const res = await axios.get(`http://ouranimelist.ninja:4000/anime/${id}`);
+            const res = await axios.get(`https://ouranimelist.ninja:4000/anime/${id}`);
             setData({ ...data, results: res.data });
           } catch (err) {
             console.error(err);

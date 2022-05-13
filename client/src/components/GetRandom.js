@@ -22,7 +22,7 @@ const GetRandom = () => {
         const timeoutId = setTimeout(() => {
             const fetch = async () => {
                 try {
-                    const res = await axios(`http://ouranimelist.ninja:4000/search?${query}`);
+                    const res = await axios(`https://ouranimelist.ninja:4000/search?${query}`);
                     console.log(res.data.data[randomNum].node)
                     setData({ ...data, results: res.data.data[randomNum].node });
                 } catch (err) {
