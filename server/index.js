@@ -7,7 +7,6 @@ var cors = require('cors');
 // conversion functions 
 const tools = require('./Tools')
 
-//app.use(express.static('../client/public'))
 app.use(cors());
 
 app.get('/', (req, res) => {

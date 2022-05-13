@@ -10,7 +10,7 @@ const GetPersonalSuggestion = () => {
         const timeoutId = setTimeout(() => {
             const fetch = async () => {
                 try {
-                    const res = await axios("https://ouranimelist.ninja:4000/anime/46102");
+                    const res = await axios("http://localhost:4000/anime/46102");
                     setData({ ...data, results: res.data });
                 } catch (err) {
                     console.error(err);
