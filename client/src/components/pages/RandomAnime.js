@@ -1,8 +1,6 @@
 import React from 'react';
 import '../../App.css';
-import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
+import { Container, Button, Row } from 'react-bootstrap';
 import GetRandom from '../GetRandom';
 import RandoAnime from "../RandoAnime";
 import { IoRefreshOutline } from "react-icons/io5";

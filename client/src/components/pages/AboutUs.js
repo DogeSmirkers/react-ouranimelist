@@ -90,7 +90,7 @@ export default function AboutUs() {
         <Col>
           <img className='teamImg' src={require('../images/hawyeepika.png')} alt="sad pixel pikachu with cowboy hat" height='200px' onClick={go}/>
           <h4 className='centerText'><a className='teamLink' href='https://github.com/LuongMonica' target="_blank" rel="noreferrer">Monica</a></h4>
-          <p className='centerText'>"Psst, lemme tell you about a secret page I hid. Your hint: my favorite Pokemon."</p>
+          <p className='centerText'>"Psst, lemme tell you about a secret page I hid. Your hint: my #1 favorite Pokemon."</p>
         </Col>
         <Col>
           <img className='teamImg' src={require('../images/kimuwu1.png')} alt="isabelle from animal crossing with suprised face and exclamation point" height='200px' onClick={start}/>
