@@ -1,0 +1,292 @@
+@import url('webfontkit-20220315-115455/stylesheet.css');
+.body {
+  background-color: #EEF1F8;
+}
+.bar {
+  background-image: url('components/images/logobanner.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100%;
+  padding: 40px;
+}
+.logoImage {
+  height: 200px;
+  width: auto;
+  display: block;
+  margin: 0px auto;
+}
+.personalSuggestion {
+  padding: 160px;
+  background-size: cover;
+  background-position: center;
+}
+.footer {
+  background-color: #fbcfcd;
+  text-align: center;
+  padding: 5px 0px;
+  margin-top: 15px;
+}
+.dogesmirk {
+  text-decoration: none;
+  color: #000000;
+}
+.suggestion-box {
+  overflow: auto;
+}
+.suggestion-box-pls-stop-moving {
+  background-color: #fbcfcd;
+  padding: 10px;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+.pictures {
+  height: auto;
+  width: 250px;
+  margin: 5px 5px;
+  text-align: center;
+}
+.suggestion-card {
+  height: auto;
+  width: 250px;
+  margin: 5px 5px;
+  text-align: center;
+}
+.suggestion-card:hover {
+  background-image: url('components/images/comicBackground.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100%;
+  border-radius: 10px;
+  transition: 0.6s;
+}
+
+.searchBar {
+  background-color: #fbcfcd;
+  padding: 20px;
+  text-align: center;
+}
+.searchBar input[type = "text"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  border-bottom: 2px solid #d69191;
+  padding: 3px 10px;
+  outline: none;
+  color: rgb(90, 81, 81);
+  transition: 0.25s;
+  height: 25px;
+  width: 220px;
+}
+.searchBar input[type = "text"]:focus {
+  width: 240px;
+  border-color: #654321;
+}
+.searchBar input[type = "submit"] {
+  text-align: center;
+  border: 0;
+  background: none;
+  border: 2px solid #d69191;
+  padding: 3px;
+  width: 100px;
+  outline: none;
+  color: rgb(90, 81, 81);
+  font-weight: bold;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.searchBar input[type = "submit"]:hover {
+  background: #fdab9f;
+  border-color: #cc6666;
+}
+
+/* NAVBAR */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'sansationregular';
+}
+
+.home,
+.services,
+.products,
+.contact-us,
+.sign-up,
+.marketing,
+.consulting {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.services {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.about-us {
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.contact-us {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.sign-up {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.marketing {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.consulting {
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+.center {
+  display: block;
+  margin: 0px auto;
+  animation: spin 5s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.about-our-app {
+  text-align: center;
+  border-radius: 10px;
+  background-image: url('components/images/aboutBackground.jpg');
+  padding-bottom: 20px;
+}
+.centerText {
+  text-align: center;
+}
+.centerTextTeam {
+  text-align: center;
+  padding-top: 10px;
+}
+.teamImg {
+  border-radius: 50%;
+  display: block;
+  margin: 0px auto;
+  background-color: #fbcfcd;
+}
+.teamLink {
+  text-decoration: none;
+  color: #000000;
+}
+.teamLink:hover {
+  color: #cc6666;
+}
+.anime-details {
+  background-color: #fbcfcd;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  overflow: auto;
+}
+.search-results {
+  background-color: #fbcfcd;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  overflow: auto;
+}
+.profile a {
+  color: black;
+}
+.profile a:hover {
+  color: white;
+}
+@media screen and (min-width: 960px) {
+  .profile-column {
+    border-right: 1px solid white;
+  }
+}
+.btn-outline-custom {
+  background-color: transparent !important;
+  border-color: #000000 !important;
+}
+.btn-outline-custom:hover {
+  background-color: rgb(252, 157, 173) !important;
+  border-color: #000000 !important;
+  color: white !important;
+}
+.sign-up-form {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 10px;
+  background-image: url('components/images/loginbackground4.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100%;
+}
+
+.dropdown:hover, .dropdown-menu{
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #dea1a1;
+}
+::-webkit-scrollbar-thumb {
+  background: #e57777;
+  border-radius: 40px;
+}
+.error-text-left {
+  text-align: right;
+  font-size: 100px;
+  margin-left: 55px;
+}
+.error-text-right {
+  text-align: left;
+  font-size: 100px;
+  margin-right: 55px;
+}
+.error img {
+  height: 100px;
+  margin-top: 20px;
+  animation: spin 5s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
