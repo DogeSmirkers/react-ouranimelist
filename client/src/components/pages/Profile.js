@@ -35,11 +35,11 @@ export default function Profile() {
             </Col>
             <Col sm={12} lg={4} className='profile-column'>
               <h4> Top 5 </h4>
-              <Link to=""><p> Pokemon </p></Link>
+              <Link to="/pikachu"><p> Pikachu </p></Link>
               <Link to=""><p> Entei </p></Link>
-              <Link to=""><p> Entei </p></Link>
-              <Link to=""><p> Entei </p></Link>
-              <Link to=""><p> Entei </p></Link>
+              <Link to=""><p> Dedenne </p></Link>
+              <Link to=""><p> Emolga </p></Link>
+              <Link to=""><p> Togedemaru </p></Link>
             </Col>
             <Col sm={12} lg={4}>
               <h4> Currently Watching </h4>
