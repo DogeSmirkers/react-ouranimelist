@@ -10,7 +10,7 @@ const GetTopUpcoming = () => {
         const timeoutId = setTimeout(() => {
             const fetch = async () => {
                 try {
-                    const res = await axios("http://localhost:4000/ranking?rankingType=upcoming");
+                    const res = await axios("http://ouranimelist.ninja:4000/ranking?rankingType=upcoming");
                     setData({ ...data, results: res.data.data });
                 } catch (err) {
                     console.error(err);

@@ -10,7 +10,7 @@ const GetTopMovies = () => {
         const timeoutId = setTimeout(() => {
             const fetch = async () => {
                 try {
-                    const res = await axios("http://localhost:4000/ranking?rankingType=movie");
+                    const res = await axios("http://ouranimelist.ninja:4000/ranking?rankingType=movie");
                     setData({ ...data, results: res.data.data });
                 } catch (err) {
                     console.error(err);

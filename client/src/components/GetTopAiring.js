@@ -10,7 +10,7 @@ const GetTopAiring = () => {
         const timeoutId = setTimeout(() => {
             const fetch = async () => {
                 try {
-                    const res = await axios("http://localhost:4000/ranking?rankingType=airing");
+                    const res = await axios("http://ouranimelist.ninja:4000/ranking?rankingType=airing");
                     setData({ ...data, results: res.data.data });
                 } catch (err) {
                     console.error(err);
